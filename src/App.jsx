@@ -2539,7 +2539,7 @@ if (stage === "video") {
 
               <p>Your surprise will appear here.</p>
 
-              <span>Add special-video.mp4</span>
+              
             </div>
           )}
         </motion.div>
