@@ -1,0 +1,11925 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&display=swap");
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #080306;
+  color: #fff;
+  font-family: "Cormorant Garamond", serif;
+}
+
+button {
+  font-family: inherit;
+}
+
+button:focus {
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* =========================================================
+   MAIN PHONE
+========================================================= */
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle at 50% 30%,
+      #3a0d20 0%,
+      #16060d 40%,
+      #080306 80%
+    );
+}
+
+.phone {
+  width: 390px;
+  height: 844px;
+
+  max-width: 100vw;
+  max-height: 100vh;
+
+  position: relative;
+  overflow: hidden;
+
+  background: #10040a;
+
+  box-shadow:
+    0 0 0 8px #111,
+    0 30px 100px rgba(0, 0, 0, 0.7);
+}
+
+/* =========================================================
+   LOCK SCREEN
+========================================================= */
+
+.lock-screen {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      rgba(130, 25, 72, 0.35),
+      transparent 35%
+    ),
+    linear-gradient(
+      160deg,
+      #13040b,
+      #320817 45%,
+      #16050d
+    );
+}
+
+.bg-blur {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(45px);
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.blur-one {
+  width: 180px;
+  height: 180px;
+  background: #ff4c9a;
+  top: 80px;
+  left: -70px;
+}
+
+.blur-two {
+  width: 220px;
+  height: 220px;
+  background: #8f194e;
+  bottom: 80px;
+  right: -100px;
+}
+
+/* =========================================================
+   STATUS BAR
+========================================================= */
+
+.status-bar,
+.home-status-bar {
+  position: absolute;
+
+  top: 13px;
+  left: 22px;
+  right: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+
+  z-index: 40;
+}
+
+.status-right,
+.home-status-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.signal {
+  font-size: 10px;
+  letter-spacing: -2px;
+}
+
+/* =========================================================
+   DYNAMIC ISLAND
+========================================================= */
+
+.dynamic-island {
+  position: absolute;
+
+  width: 118px;
+  height: 30px;
+
+  top: 9px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  border-radius: 20px;
+
+  background: #000;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  padding-right: 11px;
+  gap: 7px;
+
+  z-index: 50;
+}
+
+.island-camera,
+.island-sensor {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #101010;
+
+  box-shadow: inset 0 0 3px #555;
+}
+
+/* =========================================================
+   LOCK SCREEN DECORATIONS
+========================================================= */
+
+.flower {
+  position: absolute;
+  opacity: 0.12;
+  font-size: 45px;
+  pointer-events: none;
+}
+
+.flower-1 {
+  top: 150px;
+  left: 15px;
+}
+
+.flower-2 {
+  top: 260px;
+  right: 18px;
+}
+
+.flower-3 {
+  bottom: 220px;
+  left: 15px;
+}
+
+.flower-4 {
+  bottom: 90px;
+  right: 20px;
+}
+
+.flower-5 {
+  top: 450px;
+  right: 80px;
+  opacity: 0.07;
+}
+
+/* =========================================================
+   LOCK SCREEN CONTENT
+========================================================= */
+
+.birthday-content {
+  position: absolute;
+
+  top: 92px;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.lock-icon {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+
+  margin-bottom: 8px;
+}
+
+.happy-text {
+  font-size: 17px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.small-heart {
+  color: #ff8fc3;
+  font-size: 22px;
+  margin-top: 2px;
+}
+
+.birthday-content h1 {
+  font-family: "Great Vibes", cursive;
+
+  font-size: 68px;
+  font-weight: 400;
+
+  margin-top: 4px;
+  line-height: 1;
+
+  color: #fff;
+
+  text-shadow:
+    0 0 30px rgba(255, 90, 160, 0.3);
+}
+
+.birthday-date {
+  margin-top: 8px;
+
+  letter-spacing: 5px;
+  font-size: 13px;
+
+  opacity: 0.8;
+}
+
+.subtitle {
+  display: flex;
+  gap: 18px;
+
+  margin-top: 18px;
+
+  font-family: Arial, sans-serif;
+  font-size: 8px;
+  letter-spacing: 2px;
+
+  opacity: 0.65;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-top: 10px;
+
+  color: #ff8fc3;
+}
+
+.divider span {
+  width: 50px;
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* =========================================================
+   LOCK SCREEN HEART
+========================================================= */
+
+.glowing-heart {
+  margin-top: 15px;
+
+  width: 65px;
+  height: 65px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heart-shape {
+  width: 42px;
+  height: 42px;
+
+  position: relative;
+
+  transform: rotate(-45deg);
+
+  background: #ff5e9c;
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 0 20px rgba(255, 80, 150, 0.7),
+    0 0 50px rgba(255, 80, 150, 0.25);
+}
+
+.heart-shape::before,
+.heart-shape::after {
+  content: "";
+
+  position: absolute;
+
+  width: 42px;
+  height: 42px;
+
+  background: #ff5e9c;
+
+  border-radius: 50%;
+}
+
+.heart-shape::before {
+  top: -21px;
+  left: 0;
+}
+
+.heart-shape::after {
+  left: 21px;
+  top: 0;
+}
+
+/* =========================================================
+   LETTER
+========================================================= */
+
+.letter {
+  position: absolute;
+
+  top: 185px;
+  right: 28px;
+
+  font-family: "Great Vibes", cursive;
+  font-size: 15px;
+
+  opacity: 0.45;
+
+  transform: rotate(-8deg);
+
+  display: flex;
+  flex-direction: column;
+
+  line-height: 0.8;
+}
+
+.letter-heart {
+  font-size: 22px;
+  margin-top: 5px;
+}
+
+/* =========================================================
+   LOCK SCREEN NOTIFICATION
+========================================================= */
+
+.birthday-notification {
+  width: calc(100% - 36px);
+
+  position: absolute;
+  top: 350px;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  text-align: left;
+
+  padding: 14px;
+
+  border-radius: 19px;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(20px);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.notification-icon {
+  width: 45px;
+  height: 45px;
+
+  flex-shrink: 0;
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ff5c9d,
+      #b82b65
+    );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notification-content {
+  flex: 1;
+}
+
+.notification-top {
+  display: flex;
+  justify-content: space-between;
+
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+}
+
+.notification-top span {
+  opacity: 0.5;
+  font-weight: normal;
+}
+
+.notification-content p {
+  margin-top: 4px;
+
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+
+  line-height: 1.4;
+  opacity: 0.8;
+}
+
+/* =========================================================
+   UNLOCK BUTTON
+========================================================= */
+
+.unlock-button {
+  position: absolute;
+
+  bottom: 58px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  background: none;
+  border: none;
+
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  cursor: pointer;
+  opacity: 0.8;
+
+  z-index: 20;
+}
+
+.unlock-button span {
+  font-family: Arial, sans-serif;
+
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+/* =========================================================
+   HOME INDICATOR
+========================================================= */
+
+.home-indicator {
+  position: absolute;
+
+  bottom: 8px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 115px;
+  height: 4px;
+
+  border-radius: 10px;
+
+  background: white;
+
+  opacity: 0.8;
+
+  z-index: 110;
+}
+
+/* =========================================================
+   HOME SCREEN
+========================================================= */
+
+.home-screen {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(255, 60, 140, 0.16),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 70%,
+      rgba(150, 20, 80, 0.25),
+      transparent 35%
+    ),
+    linear-gradient(
+      155deg,
+      #12040a,
+      #260711 48%,
+      #0c0308
+    );
+}
+
+/* =========================================================
+   HOME GLOWS
+========================================================= */
+
+.home-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(60px);
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+.home-glow-one {
+  width: 150px;
+  height: 150px;
+
+  background: rgba(255, 61, 145, 0.2);
+
+  top: 90px;
+  left: -70px;
+}
+
+.home-glow-two {
+  width: 180px;
+  height: 180px;
+
+  background: rgba(180, 20, 80, 0.18);
+
+  bottom: 100px;
+  right: -80px;
+}
+
+/* =========================================================
+   HOME SCROLL AREA
+========================================================= */
+
+.home-scroll-content {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  padding: 0 20px 145px;
+
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  z-index: 2;
+}
+
+.home-scroll-content::-webkit-scrollbar {
+  display: none;
+}
+
+/* =========================================================
+   HOME STATUS BAR
+========================================================= */
+
+.home-status-bar {
+  z-index: 40;
+}
+
+.home-status-right {
+  gap: 7px;
+}
+
+/* =========================================================
+   HOME DYNAMIC ISLAND
+========================================================= */
+
+.home-island {
+  z-index: 50;
+}
+
+/* =========================================================
+   HOME HEADER
+========================================================= */
+
+.home-header {
+  position: relative;
+
+  padding-top: 78px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  z-index: 2;
+}
+
+.home-date {
+  font-family: Arial, sans-serif;
+
+  font-size: 10px;
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  opacity: 0.45;
+
+  margin-bottom: 4px;
+}
+
+.home-header h1 {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.home-header h1 span {
+  color: #ff77ae;
+  margin-left: 5px;
+}
+
+.profile-heart {
+  width: 43px;
+  height: 43px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ff7eaf;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* =========================================================
+   BIRTHDAY CARD
+========================================================= */
+
+.birthday-card {
+  position: relative;
+
+  margin-top: 22px;
+
+  width: 100%;
+  height: 145px;
+
+  border-radius: 25px;
+
+  padding: 20px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 94, 157, 0.24),
+      rgba(92, 9, 44, 0.3)
+    );
+
+  border: 1px solid rgba(255, 150, 190, 0.18);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card-glow {
+  position: absolute;
+
+  width: 130px;
+  height: 130px;
+
+  border-radius: 50%;
+
+  background: #ff5d9f;
+
+  filter: blur(60px);
+
+  right: -30px;
+  top: -20px;
+
+  opacity: 0.2;
+}
+
+.card-small {
+  font-family: Arial, sans-serif;
+
+  font-size: 8px;
+  letter-spacing: 2px;
+
+  opacity: 0.55;
+}
+
+.card-date {
+  font-size: 24px;
+
+  letter-spacing: 4px;
+
+  margin-top: 6px;
+}
+
+.card-message {
+  font-size: 14px;
+
+  line-height: 1.3;
+
+  opacity: 0.7;
+
+  margin-top: 6px;
+}
+
+.card-heart {
+  position: absolute;
+
+  right: 28px;
+  bottom: 30px;
+
+  color: #ff72ab;
+
+  filter:
+    drop-shadow(
+      0 0 12px rgba(255, 80, 150, 0.7)
+    );
+}
+
+/* =========================================================
+   APPS TITLE
+========================================================= */
+
+.apps-title {
+  margin-top: 22px;
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 9px;
+  letter-spacing: 1.8px;
+
+  opacity: 0.6;
+}
+
+.progress-count {
+  letter-spacing: 0;
+  text-transform: none;
+  opacity: 0.8;
+}
+
+/* =========================================================
+   APP GRID
+========================================================= */
+
+.app-grid {
+  margin-top: 10px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 9px;
+
+  padding-bottom: 5px;
+}
+
+/* =========================================================
+   APP CARD
+========================================================= */
+
+.app-card {
+  position: relative;
+
+  min-height: 107px;
+
+  padding: 13px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 19px;
+
+  background: rgba(255, 255, 255, 0.055);
+
+  color: white;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(12px);
+
+  overflow: hidden;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.2s ease;
+}
+
+.app-card:hover {
+  background: rgba(255, 255, 255, 0.09);
+
+  border-color:
+    rgba(255, 120, 175, 0.2);
+}
+
+.app-card:active {
+  transform: scale(0.96);
+}
+
+/* =========================================================
+   APP ICON
+========================================================= */
+
+.app-icon {
+  width: 43px;
+  height: 43px;
+
+  border-radius: 13px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ff6ca9,
+      #a61f59
+    );
+
+  box-shadow:
+    0 8px 20px rgba(255, 50, 140, 0.18);
+}
+
+/* =========================================================
+   APP NAME
+========================================================= */
+
+.app-name {
+  margin-top: 8px;
+
+  font-size: 15px;
+}
+
+/* =========================================================
+   APP DESCRIPTION
+========================================================= */
+
+.app-description {
+  margin-top: 2px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 8px;
+
+  line-height: 1.2;
+
+  opacity: 0.4;
+}
+
+/* =========================================================
+   EXPLORED APP
+========================================================= */
+
+.app-explored {
+  border-color:
+    rgba(255, 118, 173, 0.22);
+
+  background:
+    rgba(255, 90, 150, 0.07);
+}
+
+.explored-mark {
+  position: absolute;
+
+  right: 10px;
+  top: 10px;
+
+  width: 19px;
+  height: 19px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    rgba(255, 102, 160, 0.2);
+
+  color: #ff8cbd;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 11px;
+}
+
+/* =========================================================
+   SECRET APP
+========================================================= */
+
+.secret-app {
+  border-color:
+    rgba(255, 115, 170, 0.35);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 70, 145, 0.14),
+      rgba(255, 255, 255, 0.05)
+    );
+}
+
+.secret-icon {
+  background:
+    linear-gradient(
+      145deg,
+      #ff83b7,
+      #8e164d
+    );
+}
+
+.secret-glow {
+  position: absolute;
+
+  width: 80px;
+  height: 80px;
+
+  border-radius: 50%;
+
+  background: #ff4e98;
+
+  filter: blur(30px);
+
+  opacity: 0.18;
+
+  right: -20px;
+  top: -20px;
+}
+
+.new-badge {
+  position: absolute;
+
+  right: 9px;
+  top: 9px;
+
+  z-index: 3;
+
+  padding: 3px 6px;
+
+  border-radius: 7px;
+
+  background: #ff579d;
+
+  color: white;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 7px;
+
+  font-weight: bold;
+
+  letter-spacing: 0.5px;
+
+  box-shadow:
+    0 0 15px rgba(255, 80, 150, 0.45);
+}
+
+/* =========================================================
+   EXPLORATION MESSAGE
+========================================================= */
+
+.exploration-message {
+  text-align: center;
+
+  margin-top: 11px;
+  margin-bottom: 15px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 9px;
+
+  line-height: 1.4;
+
+  opacity: 0.42;
+}
+
+.exploration-message span {
+  color: #ff83b5;
+}
+
+.home-bottom-space {
+  height: 20px;
+}
+
+/* =========================================================
+   FIXED DOCK
+========================================================= */
+
+.home-dock {
+  position: absolute;
+
+  left: 20px;
+  right: 20px;
+
+  bottom: 24px;
+
+  height: 58px;
+
+  border-radius: 21px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-around;
+
+  background:
+    rgba(45, 18, 31, 0.88);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.35);
+
+  z-index: 100;
+}
+
+.dock-icon {
+  color: #ff83b5;
+
+  width: 39px;
+  height: 39px;
+
+  border-radius: 13px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background:
+    rgba(255, 255, 255, 0.05);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.dock-icon:hover {
+  background:
+    rgba(255, 255, 255, 0.1);
+
+  transform: translateY(-2px);
+}
+
+.home-screen .home-indicator {
+  position: absolute;
+
+  bottom: 7px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 115px;
+  height: 4px;
+
+  border-radius: 10px;
+
+  background: white;
+
+  opacity: 0.8;
+
+  z-index: 110;
+}
+
+/* =========================================================
+   GENERIC APP PAGE
+========================================================= */
+
+.app-page {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+
+  padding: 100px 25px 40px;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 50% 25%,
+      rgba(255, 60, 140, 0.2),
+      transparent 35%
+    ),
+    #11040a;
+
+  overflow: hidden;
+}
+
+.back-button {
+  position: absolute;
+
+  top: 55px;
+  left: 20px;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.1);
+
+  background:
+    rgba(255, 255, 255, 0.07);
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  z-index: 20;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.back-button:hover {
+  background:
+    rgba(255, 255, 255, 0.12);
+}
+
+.back-button:active {
+  transform: scale(0.9);
+}
+
+.app-page-icon {
+  width: 75px;
+  height: 75px;
+
+  border-radius: 22px;
+
+  margin: 70px auto 20px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ff6aa8,
+      #95164f
+    );
+
+  box-shadow:
+    0 15px 40px rgba(255, 60, 145, 0.25);
+}
+
+.app-page h1 {
+  font-size: 38px;
+  font-weight: 500;
+}
+
+.app-page p {
+  margin-top: 8px;
+  opacity: 0.5;
+}
+
+.coming-soon {
+  margin-top: 70px;
+
+  padding: 30px;
+
+  border-radius: 22px;
+
+  background:
+    rgba(255, 255, 255, 0.05);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  line-height: 1.6;
+
+  opacity: 0.7;
+}
+
+/* =========================================================
+   SPECIAL APP
+========================================================= */
+
+.special-page {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  padding-top: 170px;
+
+  background:
+    radial-gradient(
+      circle at 50% 40%,
+      rgba(255, 60, 140, 0.3),
+      transparent 38%
+    ),
+    #12030a;
+
+  overflow: hidden;
+}
+
+.special-back {
+  top: 55px;
+}
+
+.special-gift {
+  width: 125px;
+  height: 125px;
+
+  border-radius: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #ff8abc;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.12);
+
+  background:
+    rgba(255, 255, 255, 0.06);
+
+  box-shadow:
+    0 0 50px rgba(255, 60, 145, 0.18);
+}
+
+.special-page h1 {
+  font-family: "Great Vibes", cursive;
+
+  font-size: 48px;
+  font-weight: 400;
+
+  margin-top: 30px;
+}
+
+.special-page p {
+  margin-top: 10px;
+
+  opacity: 0.55;
+
+  line-height: 1.6;
+}
+
+.locked-button {
+  margin-top: 40px;
+
+  padding: 13px 25px;
+
+  border-radius: 30px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.1);
+
+  background:
+    rgba(255, 255, 255, 0.07);
+
+  color: white;
+}
+
+/* =========================================================
+   UNLOCK NOTIFICATION
+========================================================= */
+
+.unlock-notification {
+  position: absolute;
+
+  z-index: 200;
+
+  top: 45px;
+
+  left: 12px;
+  right: 12px;
+
+  min-height: 70px;
+
+  padding: 12px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  border-radius: 20px;
+
+  background:
+    rgba(35, 12, 23, 0.92);
+
+  border:
+    1px solid rgba(255, 120, 175, 0.2);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.5);
+
+  backdrop-filter: blur(25px);
+}
+
+.unlock-notification-icon {
+  width: 43px;
+  height: 43px;
+
+  flex-shrink: 0;
+
+  border-radius: 13px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ff6aa8,
+      #9c1954
+    );
+}
+
+.unlock-notification strong {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+}
+
+.unlock-notification p {
+  margin-top: 4px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 10px;
+
+  opacity: 0.55;
+
+  line-height: 1.3;
+}
+
+.unlock-notification button {
+  margin-left: auto;
+
+  background: none;
+  border: none;
+
+  color: white;
+
+  opacity: 0.5;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.gallery-page {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 20% 15%,
+      rgba(255, 60, 140, 0.16),
+      transparent 30%
+    ),
+    linear-gradient(
+      155deg,
+      #12040a,
+      #260711 50%,
+      #0c0308
+    );
+}
+
+/* =========================================================
+   GALLERY HEADER
+========================================================= */
+
+.gallery-header {
+  position: relative;
+
+  height: 105px;
+
+  padding: 55px 20px 15px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  z-index: 10;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(18, 4, 10, 0.98),
+      rgba(18, 4, 10, 0.75),
+      transparent
+    );
+}
+
+.gallery-header > div:nth-child(2) {
+  text-align: center;
+}
+
+.gallery-header h1 {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.gallery-header p {
+  margin-top: 2px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 9px;
+
+  opacity: 0.45;
+}
+
+.gallery-back {
+  width: 39px;
+  height: 39px;
+
+  border-radius: 50%;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.1);
+
+  background:
+    rgba(255, 255, 255, 0.07);
+
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.gallery-count {
+  width: 35px;
+  height: 35px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background:
+    rgba(255, 100, 165, 0.13);
+
+  border:
+    1px solid rgba(255, 120, 175, 0.15);
+
+  color: #ff8dbc;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 11px;
+}
+
+/* =========================================================
+   GALLERY SCROLL
+========================================================= */
+
+.gallery-scroll {
+  height: calc(100% - 105px);
+
+  overflow-y: auto;
+
+  padding: 5px 15px 80px;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.gallery-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* =========================================================
+   GALLERY GRID
+========================================================= */
+
+.gallery-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 5px;
+}
+
+/* =========================================================
+   GALLERY PHOTO
+========================================================= */
+
+.gallery-photo {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 1 / 1;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 8px;
+
+  overflow: hidden;
+
+  background: #1c0710;
+
+  cursor: pointer;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+.gallery-photo img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.35s ease,
+    opacity 0.25s ease;
+}
+
+.gallery-photo:hover img {
+  transform: scale(1.04);
+}
+
+.gallery-photo:active img {
+  transform: scale(0.98);
+}
+
+/* =========================================================
+   PHOTO NUMBER
+========================================================= */
+
+.photo-number {
+  position: absolute;
+
+  left: 6px;
+  bottom: 5px;
+
+  padding: 3px 5px;
+
+  border-radius: 5px;
+
+  background:
+    rgba(0, 0, 0, 0.45);
+
+  color: white;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 7px;
+
+  opacity: 0.7;
+
+  backdrop-filter: blur(5px);
+
+  z-index: 5;
+}
+
+/* =========================================================
+   FLOATING HEART
+========================================================= */
+
+.floating-heart {
+  position: absolute;
+
+  pointer-events: none;
+
+  z-index: 20;
+
+  font-size: 28px;
+
+  line-height: 1;
+}
+
+/* =========================================================
+   GALLERY BOTTOM
+========================================================= */
+
+.gallery-bottom-text {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 15px;
+
+  padding: 28px 10px 20px;
+
+  text-align: center;
+
+  color: #ff86b7;
+}
+
+.gallery-bottom-text p {
+  font-family: Arial, sans-serif;
+
+  font-size: 9px;
+
+  line-height: 1.5;
+
+  opacity: 0.5;
+}
+
+/* =========================================================
+   FULL SCREEN PHOTO VIEWER
+========================================================= */
+
+.photo-viewer {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 300;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background:
+    rgba(7, 2, 5, 0.98);
+}
+
+/* =========================================================
+   VIEWER TOP
+========================================================= */
+
+.viewer-top {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 80px;
+
+  padding: 35px 18px 10px;
+
+  display: grid;
+
+  grid-template-columns:
+    40px 1fr 40px;
+
+  align-items: center;
+
+  text-align: center;
+
+  z-index: 10;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.7),
+      transparent
+    );
+}
+
+.viewer-top > span {
+  font-family: Arial, sans-serif;
+
+  font-size: 11px;
+
+  opacity: 0.65;
+}
+
+.viewer-close {
+  width: 38px;
+  height: 38px;
+
+  border-radius: 50%;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.12);
+
+  background:
+    rgba(255, 255, 255, 0.08);
+
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   VIEWER IMAGE
+========================================================= */
+
+.viewer-image {
+  max-width: 92%;
+  max-height: 72%;
+
+  object-fit: contain;
+
+  border-radius: 8px;
+
+  user-select: none;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* =========================================================
+   VIEWER ARROWS
+========================================================= */
+
+.viewer-arrow {
+  position: absolute;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.1);
+
+  background:
+    rgba(255, 255, 255, 0.08);
+
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  z-index: 20;
+}
+
+.viewer-left {
+  left: 12px;
+}
+
+.viewer-right {
+  right: 12px;
+}
+
+/* =========================================================
+   VIEWER BOTTOM
+========================================================= */
+
+.viewer-bottom {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  bottom: 35px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  color: #ff7faf;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 9px;
+
+  opacity: 0.55;
+}
+
+/* =========================================================
+   MESSAGES APP
+========================================================= */
+
+.messages-page {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 15%,
+      rgba(255, 70, 145, 0.12),
+      transparent 35%
+    ),
+    linear-gradient(
+      180deg,
+      #190610 0%,
+      #0d0308 100%
+    );
+
+  color: #fff;
+}
+
+/* =========================================================
+   MESSAGES HEADER
+========================================================= */
+
+.messages-header {
+  position: relative;
+
+  height: 105px;
+
+  padding: 53px 16px 12px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(39, 8, 20, 0.98),
+      rgba(25, 6, 16, 0.96)
+    );
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.06);
+
+  z-index: 20;
+}
+
+.messages-header .back-button {
+  position: static;
+
+  width: 36px;
+  height: 36px;
+
+  flex-shrink: 0;
+}
+
+.messages-profile {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  flex: 1;
+
+  margin-left: 12px;
+}
+
+.messages-avatar {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff4f9a,
+      #9c245d
+    );
+
+  color: white;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 5px 20px
+      rgba(255, 60, 140, 0.25);
+}
+
+.messages-profile-info {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.messages-profile-info strong {
+  font-family: Arial, sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+.messages-profile-info span {
+  font-family: Arial, sans-serif;
+
+  font-size: 10px;
+
+  color:
+    rgba(255, 255, 255, 0.48);
+}
+
+.messages-heart {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #ff70aa;
+
+  background:
+    rgba(255, 255, 255, 0.05);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* =========================================================
+   MESSAGES DATE
+========================================================= */
+
+.messages-date {
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.messages-date span {
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 0.5px;
+
+  color:
+    rgba(255, 255, 255, 0.42);
+
+  background:
+    rgba(255, 255, 255, 0.035);
+}
+
+/* =========================================================
+   MESSAGES CHAT
+========================================================= */
+
+.messages-chat {
+  height: calc(100% - 145px);
+
+  overflow-y: auto;
+
+  padding: 8px 18px 120px;
+
+  scrollbar-width: none;
+
+  -ms-overflow-style: none;
+}
+
+.messages-chat::-webkit-scrollbar {
+  display: none;
+}
+
+/* =========================================================
+   CHAT INTRO
+========================================================= */
+
+.chat-intro {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin: 10px 0 25px;
+
+  text-align: center;
+
+  color: #ff76ad;
+}
+
+.chat-intro span {
+  font-family: Arial, sans-serif;
+
+  font-size: 9px;
+
+  line-height: 1.5;
+
+  color:
+    rgba(255, 255, 255, 0.38);
+}
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+.message-wrapper {
+  display: flex;
+
+  flex-direction: column;
+
+  margin-bottom: 16px;
+
+  max-width: 82%;
+}
+
+.message-wrapper.received {
+  align-items: flex-start;
+}
+
+.message-wrapper.sent {
+  align-items: flex-end;
+
+  margin-left: auto;
+}
+
+.message-bubble {
+  padding: 11px 14px;
+
+  border-radius: 17px;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.18);
+}
+
+.received .message-bubble {
+  border-bottom-left-radius: 5px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #351020,
+      #26101a
+    );
+
+  border:
+    1px solid rgba(255, 255, 255, 0.06);
+
+  color:
+    rgba(255, 255, 255, 0.88);
+}
+
+.sent .message-bubble {
+  border-bottom-right-radius: 5px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f05a9b,
+      #bd326f
+    );
+
+  color: white;
+}
+
+.message-time {
+  margin-top: 4px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 8px;
+
+  color:
+    rgba(255, 255, 255, 0.28);
+}
+
+/* =========================================================
+   MESSAGE ENDING
+========================================================= */
+
+.message-ending {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin: 28px 0;
+
+  color: #ff5c9d;
+
+  text-align: center;
+}
+
+.message-ending span {
+  font-family: Arial, sans-serif;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+
+  color:
+    rgba(255, 255, 255, 0.4);
+}
+
+/* =========================================================
+   MESSAGE INPUT
+========================================================= */
+
+.message-input-area {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  bottom: 0;
+
+  padding: 10px 16px 28px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(13, 3, 8, 0),
+      rgba(13, 3, 8, 0.98) 30%
+    );
+
+  z-index: 30;
+}
+
+.fake-input {
+  height: 43px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 14px;
+
+  border-radius: 22px;
+
+  background:
+    rgba(255, 255, 255, 0.06);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.07);
+
+  color:
+    rgba(255, 255, 255, 0.32);
+
+  font-family: Arial, sans-serif;
+
+  font-size: 10px;
+}
+
+.fake-input svg {
+  color: #ff609f;
+}
+
+/* =========================================================
+   MESSAGES HOME INDICATOR
+========================================================= */
+
+.messages-page .home-indicator {
+  z-index: 50;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+  .app {
+    min-height: 100vh;
+  }
+
+  .phone {
+    width: 100vw;
+    height: 100vh;
+
+    max-width: none;
+    max-height: none;
+
+    box-shadow: none;
+  }
+}
+
+/* =========================================================
+   SHORTER PHONES
+========================================================= */
+
+@media (max-height: 750px) {
+  .birthday-content {
+    top: 75px;
+  }
+
+  .birthday-content h1 {
+    font-size: 58px;
+  }
+
+  .birthday-notification {
+    top: 330px;
+  }
+
+  .birthday-card {
+    height: 125px;
+  }
+
+  .app-card {
+    min-height: 95px;
+  }
+
+  .home-header {
+    padding-top: 70px;
+  }
+
+  .home-dock {
+    bottom: 20px;
+  }
+}
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+  .home-header h1 {
+    font-size: 26px;
+  }
+
+  .birthday-card {
+    height: 135px;
+  }
+
+  .card-date {
+    font-size: 21px;
+  }
+
+  .app-card {
+    min-height: 100px;
+    padding: 11px;
+  }
+
+  .app-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .app-name {
+    font-size: 14px;
+  }
+
+  .app-description {
+    font-size: 7px;
+  }
+
+  .home-dock {
+    left: 14px;
+    right: 14px;
+  }
+
+  .gallery-header {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .gallery-scroll {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .messages-chat {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .message-wrapper {
+    max-width: 88%;
+  }
+}
+
+/* =========================================================
+   EXTRA SMALL HEIGHT
+========================================================= */
+
+@media (max-height: 680px) {
+  .birthday-content {
+    top: 62px;
+  }
+
+  .birthday-content h1 {
+    font-size: 50px;
+  }
+
+  .birthday-notification {
+    top: 300px;
+  }
+
+  .birthday-card {
+    height: 115px;
+  }
+
+  .home-header {
+    padding-top: 68px;
+  }
+
+  .home-dock {
+    height: 52px;
+    bottom: 19px;
+  }
+
+  .dock-icon {
+    width: 35px;
+    height: 35px;
+  }
+}
+/* =========================================================
+   MUSIC PAGE
+========================================================= */
+
+.music-page {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 28%,
+      rgba(255, 55, 135, 0.20),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 50% 55%,
+      rgba(140, 15, 70, 0.15),
+      transparent 45%
+    ),
+    linear-gradient(
+      180deg,
+      #17040d 0%,
+      #100309 55%,
+      #080205 100%
+    );
+
+  color: white;
+
+  isolation: isolate;
+}
+
+/* Prevent anything inside the page from creating scrolling */
+
+.music-page * {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.music-back {
+  position: absolute;
+
+  top: 52px;
+  left: 22px;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.16);
+
+  background:
+    rgba(255, 255, 255, 0.06);
+
+  color: white;
+
+  cursor: pointer;
+
+  z-index: 50;
+
+  backdrop-filter: blur(12px);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.music-back:hover {
+  background:
+    rgba(255, 255, 255, 0.11);
+}
+
+.music-back:active {
+  transform: scale(0.9);
+}
+
+/* =========================================================
+   NOW PLAYING
+========================================================= */
+
+.music-title {
+  position: absolute;
+
+  top: 62px;
+  left: 0;
+  right: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  z-index: 10;
+}
+
+.music-title span {
+  font-family: Georgia, serif;
+
+  font-size: 13px;
+
+  letter-spacing: 2px;
+
+  color: #ffffff;
+
+  opacity: 0.9;
+}
+
+.music-title svg {
+  color: white;
+
+  transform: rotate(-12deg);
+
+  margin-top: -3px;
+}
+
+/* =========================================================
+   SPARKLES
+========================================================= */
+
+.music-sparkles {
+  position: absolute;
+
+  top: 87px;
+  left: 0;
+  right: 0;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 7px;
+
+  color: white;
+
+  font-size: 12px;
+
+  z-index: 10;
+}
+
+.music-sparkles span:first-child {
+  color: #ff71ac;
+}
+
+.music-sparkles span:nth-child(3) {
+  color: #ffb5d2;
+}
+
+/* =========================================================
+   ALBUM ART
+========================================================= */
+
+.music-art {
+  position: absolute;
+
+  width: 230px;
+  height: 230px;
+
+  top: 112px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle,
+      #8c173f 0%,
+      #470b25 45%,
+      #1e0612 75%,
+      #10030a 100%
+    );
+
+  border:
+    1px solid rgba(255, 255, 255, 0.12);
+
+  box-shadow:
+    0 0 20px rgba(255, 50, 135, 0.20),
+    0 0 60px rgba(255, 50, 135, 0.14),
+    inset 0 0 45px rgba(255, 60, 140, 0.10);
+
+  z-index: 5;
+}
+
+/* outer glowing ring */
+
+.music-art::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 7px;
+
+  border-radius: 50%;
+
+  border:
+    2px solid #ff4e99;
+
+  box-shadow:
+    0 0 14px rgba(255, 60, 145, 0.65),
+    inset 0 0 15px rgba(255, 60, 145, 0.25);
+}
+
+/* inner ring */
+
+.music-art::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 30px;
+
+  border-radius: 50%;
+
+  border:
+    1px solid rgba(255, 100, 165, 0.45);
+
+  box-shadow:
+    inset 0 0 25px rgba(255, 60, 145, 0.12);
+}
+
+/* =========================================================
+   RINGS
+========================================================= */
+
+.music-ring {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.ring-one {
+  inset: 16px;
+
+  border:
+    1px solid rgba(255, 110, 175, 0.28);
+}
+
+.ring-two {
+  inset: 35px;
+
+  border:
+    1px solid rgba(255, 110, 175, 0.2);
+}
+
+.ring-three {
+  inset: 51px;
+
+  border:
+    1px solid rgba(255, 110, 175, 0.14);
+}
+
+/* =========================================================
+   HEART PARTICLES
+========================================================= */
+
+.music-particles {
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  color:
+    rgba(255, 110, 170, 0.8);
+
+  font-family: Arial, sans-serif;
+
+  font-size: 9px;
+
+  z-index: 3;
+}
+
+.music-particles span {
+  position: absolute;
+
+  text-shadow:
+    0 0 8px rgba(255, 60, 145, 0.9);
+}
+
+.music-particles span:nth-child(1) {
+  top: 23%;
+  left: 28%;
+}
+
+.music-particles span:nth-child(2) {
+  top: 27%;
+  right: 25%;
+}
+
+.music-particles span:nth-child(3) {
+  top: 42%;
+  left: 18%;
+}
+
+.music-particles span:nth-child(4) {
+  top: 38%;
+  right: 18%;
+}
+
+.music-particles span:nth-child(5) {
+  bottom: 29%;
+  left: 26%;
+}
+
+.music-particles span:nth-child(6) {
+  bottom: 25%;
+  right: 27%;
+}
+
+.music-particles span:nth-child(7) {
+  top: 17%;
+  right: 39%;
+}
+
+.music-particles span:nth-child(8) {
+  bottom: 40%;
+  left: 14%;
+}
+
+/* =========================================================
+   MAIN HEART
+========================================================= */
+
+.music-art-heart {
+  position: relative;
+
+  width: 120px;
+  height: 120px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+
+  z-index: 6;
+
+  filter:
+    drop-shadow(
+      0 10px 18px rgba(0, 0, 0, 0.35)
+    );
+}
+
+.music-art-heart svg {
+  width: 112px;
+  height: 112px;
+}
+
+/* =========================================================
+   SMALL HEART
+========================================================= */
+
+.music-art-outline {
+  position: absolute;
+
+  right: 56px;
+  bottom: 36px;
+
+  font-size: 21px;
+
+  color: white;
+
+  z-index: 10;
+
+  text-shadow:
+    0 0 10px rgba(255, 255, 255, 0.45);
+}
+
+/* =========================================================
+   PLAYING GLOW
+========================================================= */
+
+.music-art-playing {
+  box-shadow:
+    0 0 25px rgba(255, 60, 145, 0.4),
+    0 0 75px rgba(255, 60, 145, 0.2),
+    inset 0 0 50px rgba(255, 60, 145, 0.15);
+}
+
+/* =========================================================
+   SONG DETAILS
+========================================================= */
+
+.music-details {
+  position: absolute;
+
+  top: 365px;
+  left: 0;
+  right: 0;
+
+  text-align: center;
+
+  z-index: 10;
+}
+
+.music-details h1 {
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 48px;
+
+  line-height: 1;
+
+  font-weight: 600;
+
+  letter-spacing: -1.5px;
+
+  color: #ffffff;
+}
+
+.music-details p {
+  margin-top: 13px;
+
+  font-family: Georgia, serif;
+
+  font-size: 15px;
+
+  color: white;
+
+  opacity: 0.9;
+}
+
+/* =========================================================
+   AUDIO
+========================================================= */
+
+.music-page audio {
+  display: none;
+}
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.music-progress {
+  position: absolute;
+
+  top: 455px;
+  left: 30px;
+  right: 30px;
+
+  z-index: 10;
+}
+
+.music-progress input {
+  width: 100%;
+  height: 5px;
+
+  display: block;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  cursor: pointer;
+}
+
+.music-progress input::-webkit-slider-runnable-track {
+  height: 5px;
+
+  border-radius: 10px;
+}
+
+.music-progress input::-moz-range-track {
+  height: 5px;
+
+  border-radius: 10px;
+}
+
+.music-progress input::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 16px;
+  height: 16px;
+
+  margin-top: -5.5px;
+
+  border-radius: 50%;
+
+  border: none;
+
+  background: #ff72ad;
+
+  box-shadow:
+    0 0 8px rgba(255, 80, 150, 0.5);
+
+  cursor: pointer;
+}
+
+.music-progress input::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #ff72ad;
+
+  cursor: pointer;
+}
+
+.music-time {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-top: 8px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 9px;
+
+  color: white;
+
+  opacity: 0.9;
+}
+
+/* =========================================================
+   CONTROLS
+========================================================= */
+
+.music-controls {
+  position: absolute;
+
+  top: 505px;
+  left: 0;
+  right: 0;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 48px;
+
+  z-index: 10;
+}
+
+/* =========================================================
+   SKIP
+========================================================= */
+
+.music-skip {
+  width: 56px;
+  height: 56px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border:
+    1px solid rgba(255, 105, 165, 0.35);
+
+  background:
+    rgba(255, 105, 165, 0.08);
+
+  color: white;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.music-skip:hover {
+  background:
+    rgba(255, 105, 165, 0.15);
+}
+
+.music-skip:active {
+  transform: scale(0.88);
+}
+
+.skip-arrow {
+  font-family: Arial, sans-serif;
+
+  font-size: 28px;
+
+  line-height: 1;
+}
+
+.music-skip small {
+  position: absolute;
+
+  top: 30px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+/* =========================================================
+   PLAY
+========================================================= */
+
+.music-play {
+  width: 76px;
+  height: 76px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ff4f98,
+      #db1464
+    );
+
+  color: white;
+
+  box-shadow:
+    0 0 25px rgba(255, 45, 130, 0.42),
+    0 10px 30px rgba(0, 0, 0, 0.4);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.music-play:hover {
+  box-shadow:
+    0 0 35px rgba(255, 45, 130, 0.6),
+    0 10px 35px rgba(0, 0, 0, 0.45);
+}
+
+.music-play:active {
+  transform: scale(0.9);
+}
+
+.play-icon {
+  font-family: Arial, sans-serif;
+
+  font-size: 28px;
+
+  margin-left: 5px;
+}
+
+.pause-icon {
+  font-family: Arial, sans-serif;
+
+  font-size: 22px;
+
+  letter-spacing: 3px;
+}
+
+/* =========================================================
+   HEART BELOW CONTROLS
+========================================================= */
+
+.music-bottom-heart {
+  position: absolute;
+
+  top: 595px;
+  left: 0;
+  right: 0;
+
+  display: flex;
+
+  justify-content: center;
+
+  color: white;
+
+  z-index: 10;
+}
+
+/* =========================================================
+   QUOTE
+========================================================= */
+
+.music-quote {
+  position: absolute;
+
+  top: 642px;
+  left: 20px;
+  right: 20px;
+
+  text-align: center;
+
+  z-index: 10;
+}
+
+.music-quote p {
+  font-family: Georgia, serif;
+
+  font-size: 15px;
+
+  line-height: 1.45;
+
+  color: white;
+
+  opacity: 0.82;
+}
+
+.quote-divider {
+  margin-top: 17px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  color: #ff559c;
+}
+
+.quote-divider span {
+  width: 55px;
+  height: 1px;
+
+  background:
+    #ff559c;
+
+  opacity: 0.8;
+}
+
+/* =========================================================
+   FILE PANEL
+========================================================= */
+
+.music-file-panel {
+  position: absolute;
+
+  left: 28px;
+  right: 28px;
+
+  top: 720px;
+
+  min-height: 78px;
+
+  padding: 12px 10px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  border-radius: 20px;
+
+  background:
+    rgba(255, 90, 155, 0.06);
+
+  border:
+    1px solid rgba(255, 120, 175, 0.2);
+
+  z-index: 10;
+
+  text-align: center;
+}
+
+.music-file-panel span {
+  font-family: Georgia, serif;
+
+  font-size: 12px;
+
+  color:
+    rgba(255, 255, 255, 0.65);
+}
+
+.music-file-panel strong {
+  font-family: Georgia, serif;
+
+  font-size: 12px;
+
+  color: #ff80b3;
+
+  font-weight: 600;
+}
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.music-error {
+  position: absolute;
+
+  left: 25px;
+  right: 25px;
+
+  bottom: 90px;
+
+  padding: 12px;
+
+  border-radius: 15px;
+
+  background:
+    rgba(255, 40, 100, 0.12);
+
+  border:
+    1px solid rgba(255, 70, 130, 0.2);
+
+  text-align: center;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 9px;
+
+  z-index: 100;
+}
+
+.music-error strong {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #ff80b3;
+}
+
+/* =========================================================
+   HOME INDICATOR
+========================================================= */
+
+.music-page .home-indicator {
+  position: absolute;
+
+  bottom: 7px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 110px;
+  height: 4px;
+
+  border-radius: 10px;
+
+  background: white;
+
+  opacity: 0.9;
+
+  z-index: 100;
+}
+
+/* =========================================================
+   RESPONSIVE — SHORT PHONE
+========================================================= */
+
+@media (max-height: 780px) {
+
+  .music-title {
+    top: 45px;
+  }
+
+  .music-sparkles {
+    top: 69px;
+  }
+
+  .music-art {
+    width: 190px;
+    height: 190px;
+
+    top: 91px;
+  }
+
+  .music-art-heart {
+    width: 95px;
+    height: 95px;
+  }
+
+  .music-art-heart svg {
+    width: 90px;
+    height: 90px;
+  }
+
+  .music-details {
+    top: 300px;
+  }
+
+  .music-details h1 {
+    font-size: 39px;
+  }
+
+  .music-details p {
+    margin-top: 8px;
+  }
+
+  .music-progress {
+    top: 380px;
+  }
+
+  .music-controls {
+    top: 430px;
+  }
+
+  .music-bottom-heart {
+    top: 510px;
+  }
+
+  .music-quote {
+    top: 550px;
+  }
+
+  .music-file-panel {
+    top: 640px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+  .music-details h1 {
+    font-size: 43px;
+  }
+
+  .music-art {
+    width: 215px;
+    height: 215px;
+  }
+
+  .music-progress {
+    left: 25px;
+    right: 25px;
+  }
+
+  .music-controls {
+    gap: 35px;
+  }
+
+  .music-file-panel {
+    left: 20px;
+    right: 20px;
+  }
+}
+/* =========================================================
+   MUSIC PAGE — FINAL ALIGNMENT
+   Paste this at the VERY BOTTOM of App.css
+========================================================= */
+
+.music-page {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 28%,
+      rgba(255, 40, 130, 0.16),
+      transparent 32%
+    ),
+    linear-gradient(
+      180deg,
+      #19040d 0%,
+      #100208 55%,
+      #080205 100%
+    );
+
+  color: #fff;
+
+  box-sizing: border-box;
+}
+
+.music-page * {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.music-back {
+  position: absolute;
+
+  top: 52px;
+  left: 20px;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  background: rgba(255, 255, 255, 0.06);
+
+  color: #fff;
+
+  z-index: 100;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(10px);
+}
+
+.music-back:active {
+  transform: scale(0.9);
+}
+
+/* =========================================================
+   NOW PLAYING
+========================================================= */
+
+.music-title {
+  position: absolute;
+
+  top: 50px;
+  left: 0;
+  right: 0;
+
+  height: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  z-index: 20;
+}
+
+.music-title span {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 14px;
+
+  letter-spacing: 1.7px;
+
+  color: #fff;
+}
+
+.music-title svg {
+  width: 20px;
+  height: 20px;
+
+  transform: rotate(-12deg);
+}
+
+/* =========================================================
+   SPARKLES
+========================================================= */
+
+.music-sparkles {
+  position: absolute;
+
+  top: 82px;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+
+  gap: 5px;
+
+  font-size: 11px;
+
+  color: #fff;
+
+  z-index: 20;
+}
+
+/* =========================================================
+   HEART / ALBUM ART
+========================================================= */
+
+.music-art {
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  top: 92px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle,
+      #5e1230 0%,
+      #30091d 48%,
+      #18040d 75%,
+      #0c0207 100%
+    );
+
+  border: 1px solid rgba(255, 80, 150, 0.5);
+
+  box-shadow:
+    0 0 15px rgba(255, 40, 130, 0.35),
+    0 0 45px rgba(255, 40, 130, 0.18),
+    inset 0 0 30px rgba(255, 40, 130, 0.12);
+
+  z-index: 10;
+}
+
+/* Outer glowing ring */
+
+.music-art::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 7px;
+
+  border-radius: 50%;
+
+  border: 2px solid #ff4d99;
+
+  box-shadow:
+    0 0 10px rgba(255, 60, 145, 0.8);
+}
+
+/* Inner ring */
+
+.music-art::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 29px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 100, 170, 0.45);
+}
+
+/* =========================================================
+   INNER RINGS
+========================================================= */
+
+.music-ring {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.ring-one {
+  inset: 17px;
+
+  border: 1px solid rgba(255, 100, 170, 0.35);
+}
+
+.ring-two {
+  inset: 38px;
+
+  border: 1px solid rgba(255, 100, 170, 0.25);
+}
+
+.ring-three {
+  inset: 51px;
+
+  border: 1px solid rgba(255, 100, 170, 0.18);
+}
+
+/* =========================================================
+   PARTICLES
+========================================================= */
+
+.music-particles {
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  color: #ff6eab;
+
+  font-size: 8px;
+
+  z-index: 5;
+}
+
+.music-particles span {
+  position: absolute;
+
+  text-shadow:
+    0 0 8px rgba(255, 70, 150, 0.8);
+}
+
+.music-particles span:nth-child(1) {
+  top: 22%;
+  left: 27%;
+}
+
+.music-particles span:nth-child(2) {
+  top: 30%;
+  right: 25%;
+}
+
+.music-particles span:nth-child(3) {
+  top: 45%;
+  left: 18%;
+}
+
+.music-particles span:nth-child(4) {
+  top: 38%;
+  right: 17%;
+}
+
+.music-particles span:nth-child(5) {
+  bottom: 28%;
+  left: 27%;
+}
+
+.music-particles span:nth-child(6) {
+  bottom: 25%;
+  right: 25%;
+}
+
+.music-particles span:nth-child(7) {
+  top: 18%;
+  right: 38%;
+}
+
+/* =========================================================
+   MAIN HEART
+========================================================= */
+
+.music-art-heart {
+  position: relative;
+
+  width: 100px;
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+
+  z-index: 8;
+
+  filter:
+    drop-shadow(
+      0 8px 15px rgba(0, 0, 0, 0.35)
+    );
+}
+
+.music-art-heart svg {
+  width: 92px;
+  height: 92px;
+}
+
+/* Small outline heart */
+
+.music-art-outline {
+  position: absolute;
+
+  right: 35px;
+  bottom: 30px;
+
+  color: #fff;
+
+  font-size: 20px;
+
+  z-index: 15;
+}
+
+/* =========================================================
+   SONG TITLE
+========================================================= */
+
+.music-details {
+  position: absolute;
+
+  top: 310px;
+  left: 0;
+  right: 0;
+
+  text-align: center;
+
+  z-index: 20;
+}
+
+.music-details h1 {
+  margin: 0;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 40px;
+
+  line-height: 1;
+
+  font-weight: 600;
+
+  letter-spacing: -1.5px;
+
+  color: #fff;
+}
+
+.music-details p {
+  margin: 12px 0 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 15px;
+
+  color: #fff;
+}
+
+/* =========================================================
+   AUDIO
+========================================================= */
+
+.music-page audio {
+  display: none;
+}
+
+/* =========================================================
+   PROGRESS BAR
+========================================================= */
+
+.music-progress {
+  position: absolute;
+
+  top: 382px;
+
+  left: 38px;
+  right: 38px;
+
+  z-index: 30;
+}
+
+.music-progress input {
+  width: 100%;
+
+  height: 5px;
+
+  margin: 0;
+
+  padding: 0;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  border: none;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  background:
+    linear-gradient(
+      to right,
+      #ff5c9f 0%,
+      #ff5c9f 0%,
+      rgba(255,255,255,0.18) 0%,
+      rgba(255,255,255,0.18) 100%
+    );
+
+  cursor: pointer;
+}
+
+.music-progress input::-webkit-slider-runnable-track {
+  height: 5px;
+
+  border-radius: 10px;
+
+  background: transparent;
+}
+
+.music-progress input::-moz-range-track {
+  height: 5px;
+
+  border-radius: 10px;
+
+  background: transparent;
+}
+
+.music-progress input::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 16px;
+  height: 16px;
+
+  margin-top: -5.5px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #ff69aa;
+
+  box-shadow:
+    0 0 8px rgba(255, 70, 150, 0.6);
+
+  cursor: pointer;
+}
+
+.music-progress input::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #ff69aa;
+
+  cursor: pointer;
+}
+
+.music-time {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-top: 8px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 9px;
+
+  color: #fff;
+}
+
+/* =========================================================
+   PLAYER CONTROLS
+========================================================= */
+
+.music-controls {
+  position: absolute;
+
+  top: 438px;
+
+  left: 0;
+  right: 0;
+
+  height: 65px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 48px;
+
+  z-index: 50;
+}
+
+/* =========================================================
+   SKIP BUTTON
+========================================================= */
+
+.music-skip {
+  position: relative;
+
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border:
+    1px solid rgba(255, 90, 155, 0.45);
+
+  background:
+    rgba(255, 50, 130, 0.06);
+
+  color: #fff;
+
+  cursor: pointer;
+}
+
+.music-skip:active {
+  transform: scale(0.9);
+}
+
+.skip-arrow {
+  font-size: 27px;
+
+  line-height: 1;
+}
+
+.music-skip small {
+  position: absolute;
+
+  top: 29px;
+
+  font-size: 8px;
+
+  font-family: Arial, sans-serif;
+}
+
+/* =========================================================
+   PLAY BUTTON
+========================================================= */
+
+.music-play {
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ff5aa0,
+      #e51a6d
+    );
+
+  color: white;
+
+  box-shadow:
+    0 0 25px rgba(255, 40, 130, 0.38);
+
+  cursor: pointer;
+
+  z-index: 55;
+}
+
+.music-play:active {
+  transform: scale(0.9);
+}
+
+.play-icon {
+  font-size: 25px;
+
+  margin-left: 4px;
+}
+
+.pause-icon {
+  font-size: 20px;
+
+  letter-spacing: 2px;
+}
+
+/* =========================================================
+   HEART UNDER PLAYER
+========================================================= */
+
+.music-bottom-heart {
+  position: absolute;
+
+  top: 510px;
+
+  left: 0;
+  right: 0;
+
+  display: flex;
+
+  justify-content: center;
+
+  color: #fff;
+
+  z-index: 20;
+}
+
+/* =========================================================
+   FILE PANEL
+========================================================= */
+
+.music-file-panel {
+  position: absolute;
+
+  top: 475px;
+
+  left: 55px;
+  right: 55px;
+
+  min-height: 78px;
+
+  padding: 13px 10px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  border-radius: 17px;
+
+  background:
+    rgba(255, 50, 120, 0.08);
+
+  border:
+    1px solid rgba(255, 70, 140, 0.35);
+
+  text-align: center;
+
+  z-index: 10;
+}
+
+.music-file-panel span {
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 10px;
+
+  color: rgba(255,255,255,0.85);
+}
+
+.music-file-panel strong {
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 9px;
+
+  color: #ff79b1;
+
+  word-break: break-word;
+}
+
+/* =========================================================
+   QUOTE
+========================================================= */
+
+.music-quote {
+  position: absolute;
+
+  top: 558px;
+
+  left: 20px;
+  right: 20px;
+
+  text-align: center;
+
+  z-index: 25;
+}
+
+.music-quote p {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 14px;
+
+  line-height: 1.55;
+
+  color: #fff;
+
+  opacity: 0.9;
+}
+
+.quote-divider {
+  margin-top: 13px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  color: #ff5c9f;
+}
+
+.quote-divider span {
+  width: 45px;
+
+  height: 1px;
+
+  background: #ff5c9f;
+}
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.music-error {
+  position: absolute;
+
+  left: 35px;
+  right: 35px;
+
+  bottom: 45px;
+
+  padding: 10px;
+
+  border-radius: 12px;
+
+  background:
+    rgba(255, 40, 100, 0.15);
+
+  border:
+    1px solid rgba(255, 70, 130, 0.25);
+
+  text-align: center;
+
+  font-size: 9px;
+
+  z-index: 100;
+}
+
+.music-error strong {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #ff80b3;
+}
+
+/* =========================================================
+   HOME INDICATOR
+========================================================= */
+
+.music-page .home-indicator {
+  position: absolute;
+
+  left: 50%;
+  bottom: 5px;
+
+  transform: translateX(-50%);
+
+  width: 110px;
+  height: 4px;
+
+  border-radius: 10px;
+
+  background: #fff;
+
+  opacity: 0.9;
+
+  z-index: 200;
+}
+
+/* =========================================================
+   SHORT PHONE — IMPORTANT
+========================================================= */
+
+@media (max-height: 700px) {
+
+  .music-title {
+    top: 42px;
+  }
+
+  .music-back {
+    top: 45px;
+  }
+
+  .music-sparkles {
+    top: 70px;
+  }
+
+  .music-art {
+    width: 165px;
+    height: 165px;
+
+    top: 78px;
+  }
+
+  .music-art-heart svg {
+    width: 78px;
+    height: 78px;
+  }
+
+  .music-details {
+    top: 270px;
+  }
+
+  .music-details h1 {
+    font-size: 36px;
+  }
+
+  .music-progress {
+    top: 335px;
+  }
+
+  .music-controls {
+    top: 385px;
+  }
+
+  .music-file-panel {
+    top: 430px;
+  }
+
+  .music-bottom-heart {
+    top: 460px;
+  }
+
+  .music-quote {
+    top: 505px;
+  }
+
+  .music-quote p {
+    font-size: 13px;
+  }
+}
+
+/* =========================================================
+   VERY SHORT PHONE
+========================================================= */
+
+@media (max-height: 620px) {
+
+  .music-art {
+    width: 145px;
+    height: 145px;
+
+    top: 75px;
+  }
+
+  .music-art-heart svg {
+    width: 68px;
+    height: 68px;
+  }
+
+  .music-details {
+    top: 235px;
+  }
+
+  .music-details h1 {
+    font-size: 32px;
+  }
+
+  .music-details p {
+    margin-top: 7px;
+    font-size: 13px;
+  }
+
+  .music-progress {
+    top: 295px;
+  }
+
+  .music-controls {
+    top: 340px;
+  }
+
+  .music-file-panel {
+    top: 390px;
+  }
+
+  .music-bottom-heart {
+    top: 455px;
+  }
+
+  .music-quote {
+    top: 480px;
+  }
+
+  .music-quote p {
+    font-size: 12px;
+  }
+}
+/* =========================================================
+   FINAL MUSIC PAGE ALIGNMENT
+========================================================= */
+
+.music-page {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 25%,
+      rgba(255, 35, 125, 0.14),
+      transparent 35%
+    ),
+    linear-gradient(
+      180deg,
+      #19040d 0%,
+      #100208 60%,
+      #080205 100%
+    );
+
+  color: white;
+}
+
+.music-page * {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.music-back {
+  position: absolute;
+
+  top: 48px;
+  left: 20px;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255,255,255,0.2);
+
+  background: rgba(255,255,255,0.06);
+
+  color: white;
+
+  z-index: 100;
+}
+
+/* =========================================================
+   NOW PLAYING
+========================================================= */
+
+.music-title {
+  position: absolute;
+
+  top: 51px;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  z-index: 50;
+}
+
+.music-title span {
+  font-family: Georgia, serif;
+
+  font-size: 14px;
+
+  letter-spacing: 1.7px;
+}
+
+.music-title svg {
+  width: 19px;
+  height: 19px;
+
+  transform: rotate(-12deg);
+}
+
+/* =========================================================
+   ALBUM ART
+========================================================= */
+
+.music-art {
+  position: absolute;
+
+  width: 175px;
+  height: 175px;
+
+  top: 91px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      #651333 0%,
+      #36091e 50%,
+      #17030c 100%
+    );
+
+  border: 1px solid rgba(255,80,150,0.55);
+
+  box-shadow:
+    0 0 18px rgba(255,50,140,0.45),
+    0 0 45px rgba(255,40,130,0.2);
+
+  z-index: 20;
+}
+
+.music-art::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 7px;
+
+  border-radius: 50%;
+
+  border: 2px solid #ff4d99;
+
+  box-shadow:
+    0 0 12px rgba(255,60,145,0.7);
+}
+
+.music-art::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 29px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255,110,175,0.45);
+}
+
+/* Rings */
+
+.music-ring {
+  position: absolute;
+
+  border-radius: 50%;
+}
+
+.ring-one {
+  inset: 17px;
+
+  border: 1px solid rgba(255,120,180,0.3);
+}
+
+.ring-two {
+  inset: 38px;
+
+  border: 1px solid rgba(255,120,180,0.23);
+}
+
+.ring-three {
+  inset: 51px;
+
+  border: 1px solid rgba(255,120,180,0.17);
+}
+
+/* =========================================================
+   HEART
+========================================================= */
+
+.music-art-heart {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+
+  z-index: 10;
+
+  filter:
+    drop-shadow(
+      0 8px 15px rgba(0,0,0,0.35)
+    );
+}
+
+.music-art-heart svg {
+  width: 88px;
+  height: 88px;
+}
+
+.music-art-outline {
+  position: absolute;
+
+  right: 34px;
+  bottom: 29px;
+
+  color: white;
+
+  font-size: 20px;
+
+  z-index: 15;
+}
+
+/* =========================================================
+   SONG TITLE
+========================================================= */
+
+.music-details {
+  position: absolute;
+
+  top: 300px;
+
+  left: 0;
+  right: 0;
+
+  text-align: center;
+
+  z-index: 30;
+}
+
+.music-details h1 {
+  margin: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 38px;
+
+  line-height: 1;
+
+  font-weight: 600;
+
+  letter-spacing: -1px;
+}
+
+.music-details p {
+  margin: 14px 0 0;
+
+  font-family: Georgia, serif;
+
+  font-size: 14px;
+}
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.music-progress {
+  position: absolute;
+
+  top: 360px;
+
+  left: 45px;
+  right: 45px;
+
+  z-index: 40;
+}
+
+.music-progress input {
+  width: 100%;
+
+  height: 5px;
+
+  margin: 0;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  background:
+    rgba(255,255,255,0.18);
+}
+
+.music-progress input::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 16px;
+  height: 16px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #ff69aa;
+
+  box-shadow:
+    0 0 8px rgba(255,60,150,0.6);
+}
+
+.music-progress input::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #ff69aa;
+}
+
+.music-time {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-top: 8px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 9px;
+}
+
+/* =========================================================
+   CONTROLS
+========================================================= */
+
+.music-controls {
+  position: absolute;
+
+  top: 410px;
+
+  left: 0;
+  right: 0;
+
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 48px;
+
+  z-index: 80;
+}
+
+/* Skip */
+
+.music-skip {
+  position: relative;
+
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border:
+    1px solid rgba(255,90,155,0.45);
+
+  background:
+    rgba(255,50,130,0.06);
+
+  color: white;
+
+  cursor: pointer;
+}
+
+.skip-arrow {
+  font-size: 26px;
+}
+
+.music-skip small {
+  position: absolute;
+
+  top: 29px;
+
+  font-size: 8px;
+}
+
+/* Play */
+
+.music-play {
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ff5aa0,
+      #e51a6d
+    );
+
+  color: white;
+
+  box-shadow:
+    0 0 25px rgba(255,40,130,0.4);
+
+  cursor: pointer;
+
+  z-index: 90;
+}
+
+.play-icon {
+  font-size: 25px;
+
+  margin-left: 4px;
+}
+
+.pause-icon {
+  font-size: 20px;
+}
+
+/* =========================================================
+   FILE PANEL
+========================================================= */
+
+.music-file-panel {
+  position: absolute;
+
+  top: 485px;
+
+  left: 55px;
+  right: 55px;
+
+  height: 72px;
+
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  border-radius: 16px;
+
+  background:
+    rgba(255,50,120,0.07);
+
+  border:
+    1px solid rgba(255,70,140,0.32);
+
+  text-align: center;
+
+  z-index: 20;
+}
+
+.music-file-panel span {
+  font-family: Georgia, serif;
+
+  font-size: 10px;
+
+  color: rgba(255,255,255,0.85);
+}
+
+.music-file-panel strong {
+  font-family: Arial, sans-serif;
+
+  font-size: 9px;
+
+  color: #ff79b1;
+}
+
+/* =========================================================
+   QUOTE
+========================================================= */
+
+.music-quote {
+  position: absolute;
+
+  top: 575px;
+
+  left: 20px;
+  right: 20px;
+
+  text-align: center;
+
+  z-index: 30;
+}
+
+.music-quote p {
+  margin: 0;
+
+  font-family: Georgia, serif;
+
+  font-size: 14px;
+
+  line-height: 1.55;
+
+  color: white;
+}
+
+.quote-divider {
+  margin-top: 12px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  color: #ff5c9f;
+}
+
+.quote-divider span {
+  width: 45px;
+
+  height: 1px;
+
+  background: #ff5c9f;
+}
+
+/* =========================================================
+   HIDE ERROR BOX
+   The error box was creating the SECOND rectangle
+========================================================= */
+
+.music-error {
+  display: none !important;
+}
+
+/* =========================================================
+   BOTTOM HEART
+========================================================= */
+
+.music-bottom-heart {
+  position: absolute;
+
+  top: 545px;
+
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+
+  color: white;
+
+  z-index: 40;
+}
+
+/* =========================================================
+   HOME INDICATOR
+========================================================= */
+
+.music-page .home-indicator {
+  position: absolute;
+
+  bottom: 6px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 110px;
+  height: 4px;
+
+  border-radius: 10px;
+
+  background: white;
+
+  z-index: 200;
+}
+/* =========================================================
+   MUSIC PAGE — FINAL FIX
+========================================================= */
+
+.music-page {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 28%,
+      rgba(255, 40, 130, 0.15),
+      transparent 35%
+    ),
+    linear-gradient(
+      180deg,
+      #19040d 0%,
+      #100208 65%,
+      #080205 100%
+    );
+
+  color: white;
+}
+
+/* =========================================================
+   BACK
+========================================================= */
+
+.music-back {
+  position: absolute;
+
+  top: 48px;
+  left: 20px;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255,255,255,0.2);
+
+  background: rgba(255,255,255,0.06);
+
+  color: white;
+
+  z-index: 100;
+}
+
+/* =========================================================
+   NOW PLAYING
+========================================================= */
+
+.music-title {
+  position: absolute;
+
+  top: 52px;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  z-index: 50;
+}
+
+.music-title span {
+  font-family: Georgia, serif;
+
+  font-size: 14px;
+
+  letter-spacing: 1.6px;
+
+  color: white;
+}
+
+.music-title svg {
+  width: 19px;
+  height: 19px;
+
+  transform: rotate(-12deg);
+}
+
+/* =========================================================
+   HEART ARTWORK
+   IMPORTANT:
+   DO NOT USE transform: translateX(-50%)
+   because Framer Motion controls transform.
+========================================================= */
+
+.music-art {
+  position: absolute;
+
+  width: 175px;
+  height: 175px;
+
+  /*
+     This centers the artwork WITHOUT transform.
+  */
+  left: calc(50% - 87.5px);
+
+  top: 91px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      #651333 0%,
+      #36091e 50%,
+      #17030c 100%
+    );
+
+  border: 1px solid rgba(255,80,150,0.55);
+
+  box-shadow:
+    0 0 18px rgba(255,50,140,0.45),
+    0 0 45px rgba(255,40,130,0.2);
+
+  z-index: 20;
+}
+
+.music-art::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 7px;
+
+  border-radius: 50%;
+
+  border: 2px solid #ff4d99;
+
+  box-shadow:
+    0 0 12px rgba(255,60,145,0.75);
+}
+
+.music-art::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 29px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255,110,175,0.45);
+}
+
+/* =========================================================
+   RINGS
+========================================================= */
+
+.music-ring {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.ring-one {
+  inset: 17px;
+
+  border: 1px solid rgba(255,120,180,0.30);
+}
+
+.ring-two {
+  inset: 38px;
+
+  border: 1px solid rgba(255,120,180,0.23);
+}
+
+.ring-three {
+  inset: 51px;
+
+  border: 1px solid rgba(255,120,180,0.17);
+}
+
+/* =========================================================
+   PARTICLES
+========================================================= */
+
+.music-particles {
+  position: absolute;
+
+  inset: 0;
+
+  color: #ff6eab;
+
+  font-size: 8px;
+
+  pointer-events: none;
+
+  z-index: 5;
+}
+
+.music-particles span {
+  position: absolute;
+
+  text-shadow:
+    0 0 8px rgba(255,70,150,0.9);
+}
+
+.music-particles span:nth-child(1) {
+  top: 22%;
+  left: 27%;
+}
+
+.music-particles span:nth-child(2) {
+  top: 30%;
+  right: 25%;
+}
+
+.music-particles span:nth-child(3) {
+  top: 45%;
+  left: 18%;
+}
+
+.music-particles span:nth-child(4) {
+  top: 38%;
+  right: 17%;
+}
+
+.music-particles span:nth-child(5) {
+  bottom: 28%;
+  left: 27%;
+}
+
+.music-particles span:nth-child(6) {
+  bottom: 25%;
+  right: 25%;
+}
+
+.music-particles span:nth-child(7) {
+  top: 18%;
+  right: 38%;
+}
+
+/* =========================================================
+   MAIN HEART
+========================================================= */
+
+.music-art-heart {
+  position: relative;
+
+  width: 100px;
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+
+  z-index: 10;
+
+  filter:
+    drop-shadow(
+      0 8px 15px rgba(0,0,0,0.35)
+    );
+}
+
+.music-art-heart svg {
+  width: 88px;
+  height: 88px;
+}
+
+.music-art-outline {
+  position: absolute;
+
+  right: 34px;
+  bottom: 29px;
+
+  color: white;
+
+  font-size: 20px;
+
+  z-index: 15;
+}
+
+/* =========================================================
+   SONG TITLE
+========================================================= */
+
+.music-details {
+  position: absolute;
+
+  top: 300px;
+
+  left: 0;
+  right: 0;
+
+  text-align: center;
+
+  z-index: 30;
+}
+
+.music-details h1 {
+  margin: 0;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 38px;
+
+  line-height: 1;
+
+  font-weight: 600;
+
+  letter-spacing: -1px;
+
+  color: white;
+}
+
+.music-details p {
+  margin: 14px 0 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 14px;
+
+  color: white;
+}
+
+/* =========================================================
+   PROGRESS BAR
+========================================================= */
+
+.music-progress {
+  position: absolute;
+
+  top: 358px;
+
+  left: 45px;
+  right: 45px;
+
+  z-index: 40;
+}
+
+.music-progress input {
+  width: 100%;
+
+  height: 5px;
+
+  margin: 0;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  background:
+    rgba(255,255,255,0.18);
+}
+
+.music-progress input::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 16px;
+  height: 16px;
+
+  margin-top: -5px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #ff69aa;
+
+  box-shadow:
+    0 0 8px rgba(255,60,150,0.65);
+}
+
+.music-progress input::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #ff69aa;
+}
+
+.music-time {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-top: 8px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 9px;
+
+  color: white;
+}
+
+/* =========================================================
+   CONTROLS
+========================================================= */
+
+.music-controls {
+  position: absolute;
+
+  top: 414px;
+
+  left: 0;
+  right: 0;
+
+  height: 65px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 48px;
+
+  z-index: 80;
+}
+
+.music-skip {
+  position: relative;
+
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border:
+    1px solid rgba(255,90,155,0.45);
+
+  background:
+    rgba(255,50,130,0.06);
+
+  color: white;
+
+  cursor: pointer;
+}
+
+.skip-arrow {
+  font-size: 26px;
+}
+
+.music-skip small {
+  position: absolute;
+
+  top: 29px;
+
+  font-size: 8px;
+}
+
+.music-play {
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ff5aa0,
+      #e51a6d
+    );
+
+  color: white;
+
+  box-shadow:
+    0 0 25px rgba(255,40,130,0.4);
+
+  cursor: pointer;
+
+  z-index: 90;
+}
+
+.play-icon {
+  font-size: 25px;
+
+  margin-left: 4px;
+}
+
+.pause-icon {
+  font-size: 20px;
+}
+
+/* =========================================================
+   FILE PANEL
+========================================================= */
+
+.music-file-panel {
+  position: absolute;
+
+  top: 492px;
+
+  left: 55px;
+  right: 55px;
+
+  height: 70px;
+
+  padding: 10px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  border-radius: 16px;
+
+  background:
+    rgba(255,50,120,0.07);
+
+  border:
+    1px solid rgba(255,70,140,0.32);
+
+  text-align: center;
+
+  z-index: 20;
+}
+
+.music-file-panel span {
+  font-family: Georgia, serif;
+
+  font-size: 10px;
+
+  color: rgba(255,255,255,0.85);
+}
+
+.music-file-panel strong {
+  font-family: Arial, sans-serif;
+
+  font-size: 9px;
+
+  color: #ff79b1;
+}
+
+/* =========================================================
+   REMOVE THE EXTRA HEART
+========================================================= */
+
+.music-bottom-heart {
+  display: none !important;
+}
+
+/* =========================================================
+   QUOTE
+========================================================= */
+
+.music-quote {
+  position: absolute;
+
+  top: 580px;
+
+  left: 20px;
+  right: 20px;
+
+  text-align: center;
+
+  z-index: 30;
+}
+
+.music-quote p {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+
+  color: white;
+}
+
+.quote-divider {
+  margin-top: 12px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  color: #ff5c9f;
+}
+
+.quote-divider span {
+  width: 45px;
+
+  height: 1px;
+
+  background: #ff5c9f;
+}
+
+/* =========================================================
+   ERROR MESSAGE
+========================================================= */
+
+.music-error {
+  display: none !important;
+}
+
+/* =========================================================
+   HOME INDICATOR
+========================================================= */
+
+.music-page .home-indicator {
+  position: absolute;
+
+  left: 50%;
+  bottom: 6px;
+
+  transform: translateX(-50%);
+
+  width: 110px;
+  height: 4px;
+
+  border-radius: 10px;
+
+  background: white;
+
+  opacity: 0.9;
+
+  z-index: 200;
+}
+
+/* =========================================================
+   SMALL PHONE
+========================================================= */
+
+@media (max-height: 700px) {
+
+  .music-art {
+    width: 155px;
+    height: 155px;
+
+    left: calc(50% - 77.5px);
+
+    top: 82px;
+  }
+
+  .music-art-heart svg {
+    width: 78px;
+    height: 78px;
+  }
+
+  .music-details {
+    top: 265px;
+  }
+
+  .music-details h1 {
+    font-size: 34px;
+  }
+
+  .music-details p {
+    margin-top: 9px;
+  }
+
+  .music-progress {
+    top: 325px;
+
+    left: 40px;
+    right: 40px;
+  }
+
+  .music-controls {
+    top: 370px;
+  }
+
+  .music-file-panel {
+    top: 445px;
+  }
+
+  .music-quote {
+    top: 535px;
+  }
+}
+/* =========================================================
+   MUSIC — FIX TITLE / SUBTITLE / PROGRESS / CONTROLS
+========================================================= */
+
+/* Song title */
+.music-details {
+  position: absolute;
+
+  top: 292px;
+  left: 0;
+  right: 0;
+
+  text-align: center;
+
+  z-index: 30;
+}
+
+/* "Our Song" */
+.music-details h1 {
+  margin: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 38px;
+
+  line-height: 44px;
+
+  font-weight: 600;
+
+  letter-spacing: -1px;
+
+  color: white;
+}
+
+/* Subtitle */
+.music-details p {
+  margin: 9px 0 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 14px;
+
+  line-height: 20px;
+
+  color: white;
+}
+
+/* =========================================================
+   PROGRESS BAR
+========================================================= */
+
+.music-progress {
+  position: absolute;
+
+  top: 360px;
+
+  left: 45px;
+  right: 45px;
+
+  z-index: 40;
+}
+
+/* Slider */
+.music-progress input {
+  display: block;
+
+  width: 100%;
+  height: 5px;
+
+  margin: 0;
+  padding: 0;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  border: none;
+  border-radius: 10px;
+
+  outline: none;
+
+  background:
+    rgba(255, 255, 255, 0.18);
+}
+
+/* Thumb */
+.music-progress input::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 16px;
+  height: 16px;
+
+  margin-top: -5.5px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #ff69aa;
+
+  box-shadow:
+    0 0 8px rgba(255, 60, 150, 0.65);
+
+  cursor: pointer;
+}
+
+.music-progress input::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #ff69aa;
+}
+
+/* Time */
+.music-time {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-top: 8px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 9px;
+
+  line-height: 12px;
+
+  color: white;
+}
+
+/* =========================================================
+   PLAYER CONTROLS
+========================================================= */
+
+.music-controls {
+  position: absolute;
+
+  top: 414px;
+
+  left: 0;
+  right: 0;
+
+  height: 70px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 48px;
+
+  z-index: 80;
+}
+
+/* =========================================================
+   FILE PANEL
+========================================================= */
+
+.music-file-panel {
+  position: absolute;
+
+  top: 500px;
+
+  left: 55px;
+  right: 55px;
+
+  height: 70px;
+
+  padding: 10px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  border-radius: 16px;
+
+  background:
+    rgba(255, 50, 120, 0.07);
+
+  border:
+    1px solid rgba(255, 70, 140, 0.32);
+
+  text-align: center;
+
+  z-index: 20;
+}
+
+/* =========================================================
+   QUOTE
+========================================================= */
+
+.music-quote {
+  position: absolute;
+
+  top: 590px;
+
+  left: 20px;
+  right: 20px;
+
+  text-align: center;
+
+  z-index: 30;
+}
+
+.music-quote p {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 14px;
+
+  line-height: 1.55;
+
+  color: white;
+}
+
+.quote-divider {
+  margin-top: 12px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  color: #ff5c9f;
+}
+
+.quote-divider span {
+  width: 45px;
+
+  height: 1px;
+
+  background: #ff5c9f;
+}
+
+/* Don't show the extra heart between controls and file box */
+.music-bottom-heart {
+  display: none !important;
+}
+/* =========================================================
+   MUSIC PAGE — CLEAN FINAL LAYOUT
+========================================================= */
+
+.music-page {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden !important;
+
+  background:
+    radial-gradient(
+      circle at 50% 28%,
+      rgba(255, 40, 130, 0.15),
+      transparent 35%
+    ),
+    linear-gradient(
+      180deg,
+      #19040d 0%,
+      #100208 65%,
+      #080205 100%
+    );
+
+  color: #fff;
+}
+
+.music-page * {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.music-back {
+  position: absolute;
+
+  top: 48px;
+  left: 20px;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255,255,255,0.2);
+
+  background: rgba(255,255,255,0.06);
+
+  color: white;
+
+  z-index: 100;
+}
+
+/* =========================================================
+   NOW PLAYING
+========================================================= */
+
+.music-title {
+  position: absolute;
+
+  top: 52px;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  z-index: 100;
+}
+
+.music-title span {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 14px;
+
+  letter-spacing: 1.6px;
+
+  color: #fff;
+}
+
+.music-title svg {
+  width: 19px;
+  height: 19px;
+
+  transform: rotate(-12deg);
+}
+
+/* =========================================================
+   HEART ARTWORK
+========================================================= */
+
+.music-art {
+  position: absolute;
+
+  width: 155px;
+  height: 155px;
+
+  /*
+     Center without transform because
+     Framer Motion controls transform.
+  */
+  left: calc(50% - 77.5px);
+
+  top: 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      #651333 0%,
+      #36091e 50%,
+      #17030c 100%
+    );
+
+  border: 1px solid rgba(255,80,150,0.55);
+
+  box-shadow:
+    0 0 18px rgba(255,50,140,0.45),
+    0 0 45px rgba(255,40,130,0.2);
+
+  z-index: 20;
+}
+
+.music-art::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 7px;
+
+  border-radius: 50%;
+
+  border: 2px solid #ff4d99;
+
+  box-shadow:
+    0 0 12px rgba(255,60,145,0.75);
+}
+
+.music-art::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 28px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255,110,175,0.45);
+}
+
+/* =========================================================
+   ARTWORK RINGS
+========================================================= */
+
+.music-ring {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.ring-one {
+  inset: 16px;
+
+  border: 1px solid rgba(255,120,180,0.30);
+}
+
+.ring-two {
+  inset: 35px;
+
+  border: 1px solid rgba(255,120,180,0.23);
+}
+
+.ring-three {
+  inset: 48px;
+
+  border: 1px solid rgba(255,120,180,0.17);
+}
+
+/* =========================================================
+   HEART
+========================================================= */
+
+.music-art-heart {
+  position: relative;
+
+  width: 90px;
+  height: 90px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+
+  z-index: 10;
+
+  filter:
+    drop-shadow(
+      0 8px 15px rgba(0,0,0,0.35)
+    );
+}
+
+.music-art-heart svg {
+  width: 82px;
+  height: 82px;
+}
+
+.music-art-outline {
+  position: absolute;
+
+  right: 29px;
+  bottom: 25px;
+
+  color: white;
+
+  font-size: 18px;
+
+  z-index: 15;
+}
+
+/* =========================================================
+   SONG TITLE + SUBTITLE
+========================================================= */
+
+.music-details {
+  position: absolute;
+
+  top: 292px;
+
+  left: 0;
+  right: 0;
+
+  height: 66px;
+
+  text-align: center;
+
+  z-index: 30;
+}
+
+.music-details h1 {
+  margin: 0;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 38px;
+
+  line-height: 43px;
+
+  font-weight: 600;
+
+  letter-spacing: -1px;
+
+  color: white;
+}
+
+.music-details p {
+  margin: 6px 0 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 14px;
+
+  line-height: 18px;
+
+  color: white;
+}
+
+/* =========================================================
+   PROGRESS BAR
+========================================================= */
+
+.music-progress {
+  position: absolute;
+
+  top: 365px;
+
+  left: 42px;
+  right: 42px;
+
+  height: 35px;
+
+  z-index: 40;
+}
+
+.music-progress input {
+  display: block;
+
+  width: 100%;
+  height: 5px;
+
+  margin: 0;
+
+  padding: 0;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  border: none;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  background:
+    rgba(255,255,255,0.18);
+}
+
+.music-progress input::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 16px;
+  height: 16px;
+
+  margin-top: -5.5px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #ff69aa;
+
+  box-shadow:
+    0 0 8px rgba(255,60,150,0.65);
+
+  cursor: pointer;
+}
+
+.music-progress input::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #ff69aa;
+}
+
+.music-time {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-top: 7px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 9px;
+
+  line-height: 11px;
+
+  color: white;
+}
+
+/* =========================================================
+   PLAYER CONTROLS
+========================================================= */
+
+.music-controls {
+  position: absolute;
+
+  top: 415px;
+
+  left: 0;
+  right: 0;
+
+  height: 65px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 46px;
+
+  z-index: 80;
+}
+
+/* Skip buttons */
+
+.music-skip {
+  position: relative;
+
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border:
+    1px solid rgba(255,90,155,0.45);
+
+  background:
+    rgba(255,50,130,0.06);
+
+  color: white;
+
+  cursor: pointer;
+}
+
+.music-skip:active {
+  transform: scale(0.9);
+}
+
+.skip-arrow {
+  font-size: 25px;
+}
+
+.music-skip small {
+  position: absolute;
+
+  top: 27px;
+
+  font-size: 8px;
+}
+
+/* Play button */
+
+.music-play {
+  width: 66px;
+  height: 66px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ff5aa0,
+      #e51a6d
+    );
+
+  color: white;
+
+  box-shadow:
+    0 0 25px rgba(255,40,130,0.4);
+
+  cursor: pointer;
+
+  z-index: 90;
+}
+
+.music-play:active {
+  transform: scale(0.9);
+}
+
+.play-icon {
+  font-size: 24px;
+
+  margin-left: 4px;
+}
+
+.pause-icon {
+  font-size: 19px;
+}
+
+/* =========================================================
+   MP3 FILE BOX
+========================================================= */
+
+.music-file-panel {
+  position: absolute;
+
+  top: 490px;
+
+  left: 55px;
+  right: 55px;
+
+  height: 60px;
+
+  padding: 7px 10px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+
+  border-radius: 15px;
+
+  background:
+    rgba(255,50,120,0.07);
+
+  border:
+    1px solid rgba(255,70,140,0.32);
+
+  text-align: center;
+
+  z-index: 20;
+}
+
+.music-file-panel span {
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 9px;
+
+  line-height: 12px;
+
+  color:
+    rgba(255,255,255,0.85);
+}
+
+.music-file-panel strong {
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 8px;
+
+  line-height: 11px;
+
+  color: #ff79b1;
+}
+
+/* =========================================================
+   QUOTE
+========================================================= */
+
+.music-quote {
+  position: absolute;
+
+  top: 565px;
+
+  left: 15px;
+  right: 15px;
+
+  text-align: center;
+
+  z-index: 30;
+}
+
+.music-quote p {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 13px;
+
+  line-height: 18px;
+
+  color: white;
+}
+
+.quote-divider {
+  margin-top: 7px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  color: #ff5c9f;
+}
+
+.quote-divider span {
+  width: 38px;
+
+  height: 1px;
+
+  background: #ff5c9f;
+}
+
+/* =========================================================
+   REMOVE EXTRA HEART
+========================================================= */
+
+.music-bottom-heart {
+  display: none !important;
+}
+
+/* =========================================================
+   REMOVE ERROR BOX
+========================================================= */
+
+.music-error {
+  display: none !important;
+}
+
+/* =========================================================
+   HOME INDICATOR
+========================================================= */
+
+.music-page .home-indicator {
+  position: absolute;
+
+  left: 50%;
+  bottom: 5px;
+
+  transform: translateX(-50%);
+
+  width: 110px;
+  height: 4px;
+
+  border-radius: 10px;
+
+  background: white;
+
+  opacity: 0.9;
+
+  z-index: 200;
+}
+
+/* =========================================================
+   IMPORTANT — PREVENT MUSIC PAGE SCROLLING
+========================================================= */
+
+.music-page {
+  overflow: hidden !important;
+}
+
+.music-page::-webkit-scrollbar {
+  display: none;
+}
+/* Reduce space between progress bar and player controls */
+
+.music-progress {
+  top: 375px;
+}
+
+.music-controls {
+  top: 410px;
+}
+
+/* =========================================================
+   TIMELINE APP
+========================================================= */
+
+.timeline-page {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(255, 45, 130, 0.12),
+      transparent 32%
+    ),
+    linear-gradient(
+      180deg,
+      #19040d 0%,
+      #100208 60%,
+      #080205 100%
+    );
+
+  color: #fff;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.timeline-header {
+  position: relative;
+
+  height: 132px;
+
+  padding-top: 48px;
+
+  display: flex;
+  justify-content: center;
+
+  text-align: center;
+
+  border-bottom:
+    1px solid rgba(255, 100, 160, 0.10);
+
+  z-index: 20;
+}
+
+.timeline-back {
+  position: absolute;
+
+  top: 48px;
+  left: 20px;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border:
+    1px solid rgba(255,255,255,0.18);
+
+  background:
+    rgba(255,255,255,0.06);
+
+  color: white;
+
+  cursor: pointer;
+
+  z-index: 30;
+}
+
+.timeline-back:active {
+  transform: scale(0.92);
+}
+
+/* =========================================================
+   HEADER TITLE
+========================================================= */
+
+.timeline-heading span {
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 9px;
+
+  letter-spacing: 3px;
+
+  color: #ff6ba8;
+}
+
+.timeline-heading h1 {
+  margin: 3px 0 2px;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 27px;
+
+  line-height: 32px;
+
+  font-weight: 600;
+}
+
+.timeline-heading p {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 10px;
+
+  line-height: 14px;
+
+  color:
+    rgba(255,255,255,0.62);
+}
+
+/* =========================================================
+   HEADER HEART
+========================================================= */
+
+.timeline-heart {
+  position: absolute;
+
+  top: 52px;
+  right: 20px;
+
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255,70,140,0.08);
+
+  border:
+    1px solid rgba(255,100,160,0.16);
+
+  color: #ff6ba8;
+}
+
+/* =========================================================
+   SCROLL AREA
+========================================================= */
+
+.timeline-scroll {
+  height: calc(100% - 132px);
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding:
+    12px
+    18px
+    70px;
+
+  scrollbar-width: none;
+
+  -ms-overflow-style: none;
+}
+
+.timeline-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.timeline-intro {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  padding:
+    5px
+    0
+    25px;
+}
+
+.timeline-intro-icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #ff66a6;
+
+  background:
+    rgba(255,70,140,0.08);
+
+  border:
+    1px solid rgba(255,90,150,0.18);
+
+  box-shadow:
+    0 0 20px
+    rgba(255,50,130,0.12);
+}
+
+.timeline-intro p {
+  margin: 8px 0 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 11px;
+
+  line-height: 17px;
+
+  color:
+    rgba(255,255,255,0.68);
+}
+
+/* =========================================================
+   TIMELINE CONTAINER
+========================================================= */
+
+.timeline-container {
+  position: relative;
+
+  width: 100%;
+
+  padding-bottom: 5px;
+}
+
+/* =========================================================
+   CENTRAL LINE
+========================================================= */
+
+.timeline-line {
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  left: 50%;
+
+  width: 1px;
+
+  transform: translateX(-50%);
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      rgba(255,80,150,0.65) 5%,
+      rgba(255,80,150,0.30) 95%,
+      transparent
+    );
+
+  box-shadow:
+    0 0 7px
+    rgba(255,60,140,0.25);
+
+  z-index: 1;
+}
+
+/* =========================================================
+   TIMELINE ITEM
+========================================================= */
+
+.timeline-item {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 155px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  margin-bottom: 18px;
+
+  z-index: 5;
+}
+
+/* LEFT */
+
+.timeline-left {
+  justify-content: flex-start;
+}
+
+/* RIGHT */
+
+.timeline-right {
+  justify-content: flex-end;
+}
+
+/* =========================================================
+   NODE
+========================================================= */
+
+.timeline-node {
+  position: absolute;
+
+  top: 14px;
+
+  left: 50%;
+
+  width: 32px;
+  height: 32px;
+
+  transform: translateX(-50%);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #210712;
+
+  border:
+    1px solid #ff4e98;
+
+  color: white;
+
+  font-size: 12px;
+
+  box-shadow:
+    0 0 12px
+    rgba(255,50,140,0.35);
+
+  z-index: 10;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.timeline-card {
+  width: calc(50% - 25px);
+
+  min-height: 105px;
+
+  padding:
+    13px
+    12px;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,80,150,0.10),
+      rgba(255,255,255,0.025)
+    );
+
+  border:
+    1px solid
+    rgba(255,100,160,0.18);
+
+  box-shadow:
+    0 8px 25px
+    rgba(0,0,0,0.18);
+
+  backdrop-filter: blur(10px);
+}
+
+.timeline-left .timeline-card {
+  margin-right: auto;
+}
+
+.timeline-right .timeline-card {
+  margin-left: auto;
+}
+
+/* =========================================================
+   DATE
+========================================================= */
+
+.timeline-date {
+  margin-bottom: 6px;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 8px;
+
+  letter-spacing: 1.2px;
+
+  color: #ff6baa;
+}
+
+/* =========================================================
+   EVENT TITLE
+========================================================= */
+
+.timeline-card h2 {
+  margin: 0 0 7px;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 14px;
+
+  line-height: 18px;
+
+  font-weight: 600;
+
+  color: white;
+}
+
+/* =========================================================
+   EVENT TEXT
+========================================================= */
+
+.timeline-card p {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 9px;
+
+  line-height: 14px;
+
+  color:
+    rgba(255,255,255,0.68);
+}
+
+/* =========================================================
+   ENDING
+========================================================= */
+
+.timeline-ending {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  padding:
+    22px
+    10px
+    5px;
+
+  color: #ff66a6;
+}
+
+.timeline-ending p {
+  margin: 8px 0 4px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 12px;
+
+  line-height: 18px;
+
+  color: white;
+}
+
+.timeline-ending span {
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 9px;
+
+  color:
+    rgba(255,255,255,0.52);
+}
+
+.timeline-bottom-space {
+  height: 25px;
+}
+
+/* =========================================================
+   HOME INDICATOR
+========================================================= */
+
+.timeline-page .home-indicator {
+  position: absolute;
+
+  left: 50%;
+  bottom: 5px;
+
+  transform: translateX(-50%);
+
+  width: 110px;
+  height: 4px;
+
+  border-radius: 10px;
+
+  background: white;
+
+  opacity: 0.9;
+
+  z-index: 100;
+}
+
+/* =========================================================
+   SMALL PHONE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .timeline-scroll {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .timeline-card {
+    width: calc(50% - 21px);
+
+    padding:
+      11px
+      10px;
+  }
+
+  .timeline-card h2 {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .timeline-card p {
+    font-size: 8px;
+    line-height: 13px;
+  }
+
+  .timeline-node {
+    width: 29px;
+    height: 29px;
+
+    font-size: 10px;
+  }
+}
+
+/* =====================================================
+   MEMORIES APP
+===================================================== */
+
+.memories-page {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 15%,
+      rgba(255, 105, 160, 0.14),
+      transparent 38%
+    ),
+    linear-gradient(
+      160deg,
+      #18070f 0%,
+      #260b18 45%,
+      #12050c 100%
+    );
+
+  color: white;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.memories-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 88px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 20px 20px 0;
+
+  z-index: 10;
+}
+
+
+.memories-back {
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+
+  background: rgba(255, 255, 255, 0.09);
+
+  backdrop-filter: blur(12px);
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.memories-back:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(-2px);
+}
+
+
+.memories-heading {
+  flex: 1;
+
+  margin-left: 14px;
+}
+
+
+.memories-heading span {
+  display: block;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+
+  color: rgba(255, 182, 210, 0.7);
+
+  margin-bottom: 3px;
+}
+
+
+.memories-heading h1 {
+  margin: 0;
+
+  font-size: 25px;
+  font-weight: 600;
+
+  letter-spacing: -0.5px;
+}
+
+
+.memories-heart {
+  width: 38px;
+  height: 38px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ff8eb9;
+
+  background: rgba(255, 120, 170, 0.1);
+
+  border: 1px solid rgba(255, 150, 190, 0.15);
+}
+
+
+/* =========================
+   SCROLL AREA
+========================= */
+
+.memories-scroll {
+  position: absolute;
+
+  top: 88px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  overflow-y: auto;
+
+  padding:
+    20px
+    20px
+    110px;
+
+  scrollbar-width: none;
+}
+
+
+.memories-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.memories-intro {
+  text-align: center;
+
+  padding:
+    12px
+    12px
+    24px;
+}
+
+
+.memories-intro-heart {
+  width: 54px;
+  height: 54px;
+
+  margin: 0 auto 15px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ff91bb;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 117, 169, 0.22),
+      rgba(255, 117, 169, 0.04)
+    );
+
+  box-shadow:
+    0 0 30px rgba(255, 100, 160, 0.16);
+}
+
+
+.memories-intro h2 {
+  margin: 0;
+
+  font-size: 22px;
+  font-weight: 600;
+}
+
+
+.memories-intro p {
+  max-width: 290px;
+
+  margin: 9px auto 0;
+
+  font-size: 12px;
+  line-height: 1.6;
+
+  color: rgba(255, 225, 235, 0.62);
+}
+
+
+/* =========================
+   VIDEO CARD
+========================= */
+
+.memory-video-card {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.09),
+      rgba(255, 255, 255, 0.035)
+    );
+
+  border: 1px solid rgba(255, 190, 215, 0.12);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.35);
+
+  backdrop-filter: blur(15px);
+}
+
+
+/* =========================
+   VIDEO
+========================= */
+
+.memory-video-wrapper {
+  position: relative;
+
+  width: 100%;
+  aspect-ratio: 16 / 10;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(255, 92, 151, 0.18),
+      rgba(20, 5, 13, 0.95)
+    );
+}
+
+
+.memory-video {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  background: #090308;
+}
+
+
+.memory-video-placeholder {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 90, 150, 0.13),
+      transparent 65%
+    );
+}
+
+
+.memory-play-icon {
+  width: 58px;
+  height: 58px;
+
+  margin-bottom: 13px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-left: 3px;
+
+  color: white;
+
+  
+  
+}
+
+
+.memory-play-icon span {
+  font-size: 18px;
+}
+
+
+.memory-video-placeholder p {
+  margin: 0;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: rgba(255, 240, 246, 0.9);
+}
+
+
+.memory-video-placeholder > span {
+  margin-top: 5px;
+
+  font-size: 10px;
+
+  color: rgba(255, 215, 230, 0.48);
+}
+
+
+/* =========================
+   VIDEO INFORMATION
+========================= */
+
+.memory-video-info {
+  padding: 18px 18px 20px;
+}
+
+
+.memory-video-label {
+  margin-bottom: 6px;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: #ff8fb8;
+}
+
+
+.memory-video-info h3 {
+  margin: 0;
+
+  font-size: 20px;
+  font-weight: 600;
+
+  letter-spacing: -0.3px;
+}
+
+
+.memory-video-info p {
+  margin: 8px 0 0;
+
+  font-size: 11px;
+  line-height: 1.65;
+
+  color: rgba(255, 225, 235, 0.58);
+}
+
+
+/* =========================
+   MEMORY NOTE
+========================= */
+
+.memory-note {
+  margin-top: 18px;
+
+  padding: 14px 16px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 16px;
+
+  background: rgba(255, 120, 170, 0.06);
+
+  border: 1px solid rgba(255, 150, 190, 0.09);
+
+  color: rgba(255, 225, 235, 0.58);
+
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+
+.memory-note svg {
+  flex-shrink: 0;
+
+  color: #ff8fb8;
+}
+
+
+/* =========================
+   BOTTOM SPACE
+========================= */
+
+.memories-bottom-space {
+  height: 20px;
+}
+
+
+/* =========================
+   HOME INDICATOR
+========================= */
+
+.memories-page .home-indicator {
+  position: absolute;
+
+  bottom: 8px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 135px;
+  height: 5px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.7);
+
+  z-index: 20;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 420px) {
+
+  .memories-header {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .memories-scroll {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .memory-video-info h3 {
+    font-size: 19px;
+  }
+
+}
+/* =====================================================
+   MUSIC BACK BUTTON - CLICK FIX
+===================================================== */
+
+.music-page {
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* Make sure the back button is above every
+   other Music element */
+
+.music-back {
+  position: absolute !important;
+
+  top: 55px !important;
+  left: 20px !important;
+
+  width: 42px !important;
+  height: 42px !important;
+
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 9999 !important;
+
+  pointer-events: auto !important;
+
+  cursor: pointer;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: white;
+}
+
+
+/* Make sure the icon itself doesn't
+   interfere with the button click */
+
+.music-back svg {
+  pointer-events: none;
+}
+
+
+/* Keep the title below the button */
+
+.music-title {
+  z-index: 10;
+}
+/* =========================================================
+   SPECIAL PASSWORD SCREEN — PREMIUM VERSION
+========================================================= */
+
+.special-page {
+  position: absolute !important;
+  inset: 0 !important;
+
+  overflow: hidden !important;
+
+  color: #fff;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  background:
+    radial-gradient(
+      circle at 50% 30%,
+      rgba(255, 52, 135, 0.16),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 50% 75%,
+      rgba(185, 32, 100, 0.10),
+      transparent 40%
+    ),
+    linear-gradient(
+      155deg,
+      #18030d 0%,
+      #250510 45%,
+      #100208 100%
+    );
+}
+
+
+/* =========================================================
+   SUBTLE BACKGROUND LIGHT
+========================================================= */
+
+.special-page::before {
+  content: "";
+
+  position: absolute;
+
+  width: 280px;
+  height: 280px;
+
+  top: 80px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 74, 150, 0.11),
+      transparent 68%
+    );
+
+  filter: blur(18px);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.special-back {
+  position: absolute !important;
+
+  top: 48px !important;
+  left: 18px !important;
+
+  width: 42px !important;
+  height: 42px !important;
+
+  padding: 0 !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  border: 1px solid rgba(255, 190, 215, 0.20) !important;
+  border-radius: 50% !important;
+
+  background:
+    rgba(255, 255, 255, 0.055) !important;
+
+  color: rgba(255, 240, 247, 0.92) !important;
+
+  backdrop-filter: blur(15px);
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+
+  cursor: pointer;
+
+  z-index: 9999 !important;
+
+  pointer-events: auto !important;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.special-back:hover {
+  background:
+    rgba(255, 120, 170, 0.13) !important;
+
+  transform: scale(1.04);
+}
+
+
+.special-back:active {
+  transform: scale(0.92);
+}
+
+
+.special-back svg {
+  width: 21px;
+  height: 21px;
+
+  stroke-width: 2;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.special-content {
+  position: absolute !important;
+
+  top: 50% !important;
+  left: 50% !important;
+
+  width: calc(100% - 52px) !important;
+  max-width: 350px !important;
+
+  transform: translate(-50%, -50%) !important;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  z-index: 5;
+}
+
+
+/* =========================================================
+   LOCK
+========================================================= */
+
+.special-lock {
+  width: 76px !important;
+  height: 76px !important;
+
+  margin: 0 auto 19px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  border-radius: 50% !important;
+
+  color: #ff8fbb !important;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 75, 145, 0.18),
+      rgba(255, 75, 145, 0.035)
+    ) !important;
+
+  border: 1px solid rgba(255, 145, 190, 0.22) !important;
+
+  box-shadow:
+    0 0 0 8px rgba(255, 80, 145, 0.025),
+    0 0 35px rgba(255, 60, 140, 0.20),
+    inset 0 0 25px rgba(255, 100, 170, 0.06);
+}
+
+
+.special-lock svg {
+  width: 29px;
+  height: 29px;
+
+  stroke-width: 1.7;
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.special-label {
+  display: block !important;
+
+  margin: 0 0 8px !important;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif !important;
+
+  font-size: 9px !important;
+
+  font-weight: 700 !important;
+
+  letter-spacing: 3.2px !important;
+
+  color: rgba(255, 174, 205, 0.70) !important;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.special-content h1 {
+  margin: 0 !important;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif !important;
+
+  font-size: 32px !important;
+
+  line-height: 1.15 !important;
+
+  font-weight: 500 !important;
+
+  letter-spacing: -0.5px !important;
+
+  color: #fff !important;
+
+  text-shadow:
+    0 0 25px rgba(255, 105, 165, 0.16);
+}
+
+
+/* Pink accent underneath title */
+
+.special-content h1::after {
+  content: "";
+
+  display: block;
+
+  width: 42px;
+  height: 2px;
+
+  margin: 10px auto 0;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #ff76a9,
+      transparent
+    );
+
+  opacity: 0.8;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.special-description {
+  margin: 14px auto 0 !important;
+
+  max-width: 285px !important;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif !important;
+
+  font-size: 11px !important;
+
+  line-height: 1.65 !important;
+
+  color: rgba(255, 225, 237, 0.56) !important;
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.special-divider {
+  width: 155px !important;
+
+  margin: 20px auto !important;
+
+  display: flex !important;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+
+.special-divider span {
+  flex: 1;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 145, 185, 0.28)
+    );
+}
+
+
+.special-divider span:last-child {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 145, 185, 0.28),
+      transparent
+    );
+}
+
+
+.special-divider svg {
+  color: #ff76aa;
+
+  filter:
+    drop-shadow(
+      0 0 7px rgba(255, 80, 145, 0.55)
+    );
+}
+
+
+/* =========================================================
+   QUESTION
+========================================================= */
+
+.special-question {
+  margin: 0 0 10px !important;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif !important;
+
+  font-size: 11px !important;
+
+  font-weight: 500;
+
+  color: rgba(255, 226, 237, 0.72) !important;
+}
+
+
+/* =========================================================
+   PASSWORD AREA
+========================================================= */
+
+.special-input-wrapper {
+  width: 100% !important;
+
+  height: 52px !important;
+
+  box-sizing: border-box;
+
+  display: flex !important;
+
+  align-items: center !important;
+
+  padding: 0 16px !important;
+
+  border-radius: 16px !important;
+
+  background:
+    rgba(255, 255, 255, 0.055) !important;
+
+  border:
+    1px solid rgba(255, 170, 205, 0.17) !important;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 12px 30px rgba(0, 0, 0, 0.16);
+
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.special-input-wrapper:focus-within {
+  border-color:
+    rgba(255, 112, 170, 0.60) !important;
+
+  background:
+    rgba(255, 100, 160, 0.075) !important;
+
+  box-shadow:
+    0 0 0 3px rgba(255, 80, 145, 0.055),
+    0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+
+.special-input-wrapper svg {
+  flex-shrink: 0;
+
+  width: 18px;
+  height: 18px;
+
+  color: #ff82b2;
+
+  stroke-width: 1.8;
+}
+
+
+.special-input-wrapper input {
+  flex: 1 !important;
+
+  width: 100% !important;
+  min-width: 0 !important;
+
+  height: 100% !important;
+
+  margin-left: 11px !important;
+
+  padding: 0 !important;
+
+  border: none !important;
+  outline: none !important;
+
+  background: transparent !important;
+
+  color: #fff !important;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif !important;
+
+  font-size: 13px !important;
+}
+
+
+.special-input-wrapper input::placeholder {
+  color:
+    rgba(255, 220, 235, 0.32) !important;
+}
+
+
+.special-input-wrapper input:focus {
+  outline: none !important;
+}
+
+
+.special-input-error {
+  border-color:
+    rgba(255, 75, 115, 0.70) !important;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.special-error {
+  width: 100%;
+
+  margin: 8px 0 0 !important;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif !important;
+
+  font-size: 9px !important;
+
+  color: #ff83ad !important;
+}
+
+
+/* =========================================================
+   UNLOCK BUTTON
+========================================================= */
+
+.special-unlock-button {
+  width: 100% !important;
+
+  height: 52px !important;
+
+  margin-top: 13px !important;
+
+  padding: 0 18px !important;
+
+  display: flex !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  gap: 9px !important;
+
+  border: none !important;
+
+  border-radius: 16px !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f15b99 0%,
+      #d13d7b 48%,
+      #a92e65 100%
+    ) !important;
+
+  color: #fff !important;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif !important;
+
+  font-size: 12px !important;
+
+  font-weight: 600 !important;
+
+  letter-spacing: 0.1px;
+
+  box-shadow:
+    0 12px 30px rgba(200, 40, 105, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.special-unlock-button:hover {
+  box-shadow:
+    0 15px 38px rgba(220, 45, 115, 0.38),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+
+.special-unlock-button:active {
+  transform: scale(0.97);
+}
+
+
+.special-unlock-button svg {
+  width: 16px;
+  height: 16px;
+}
+
+
+/* =========================================================
+   HINT
+========================================================= */
+
+.special-hint {
+  margin: 16px 0 0 !important;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif !important;
+
+  font-size: 11px !important;
+
+  font-style: italic;
+
+  color:
+    rgba(255, 205, 225, 0.42) !important;
+}
+
+
+/* =========================================================
+   DECORATIVE HEARTS
+========================================================= */
+
+.special-content::before {
+  content: "♡";
+
+  position: absolute;
+
+  top: -36px;
+  left: -14px;
+
+  font-size: 15px;
+
+  color: rgba(255, 100, 160, 0.30);
+
+  transform: rotate(-15deg);
+}
+
+
+.special-content::after {
+  content: "✦";
+
+  position: absolute;
+
+  right: -15px;
+  bottom: 7px;
+
+  font-size: 12px;
+
+  color: rgba(255, 120, 175, 0.30);
+}
+
+
+/* =========================================================
+   HOME INDICATOR
+========================================================= */
+
+.special-page .home-indicator {
+  position: absolute !important;
+
+  bottom: 8px !important;
+
+  left: 50% !important;
+
+  transform: translateX(-50%) !important;
+
+  width: 115px !important;
+
+  height: 4px !important;
+
+  border-radius: 999px !important;
+
+  background:
+    rgba(255, 255, 255, 0.82) !important;
+
+  z-index: 100;
+}
+/* =========================================================
+   SPECIAL VIDEO — BALANCED FINAL VERSION
+========================================================= */
+
+.special-video-page {
+  position: absolute !important;
+  inset: 0 !important;
+
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+
+  scrollbar-width: none;
+
+  -webkit-overflow-scrolling: touch;
+
+  touch-action: pan-y;
+
+  background:
+    radial-gradient(
+      circle at 50% 28%,
+      rgba(255, 60, 140, 0.17),
+      transparent 36%
+    ),
+    radial-gradient(
+      circle at 50% 72%,
+      rgba(190, 30, 100, 0.09),
+      transparent 42%
+    ),
+    linear-gradient(
+      160deg,
+      #17030c 0%,
+      #2b0718 48%,
+      #100208 100%
+    );
+}
+
+.special-video-page::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.special-video-header {
+  position: absolute !important;
+
+  top: 42px !important;
+  left: 18px !important;
+  right: 18px !important;
+
+  height: 44px !important;
+
+  display: flex !important;
+  align-items: center !important;
+
+  z-index: 100 !important;
+
+  pointer-events: none;
+}
+
+
+.special-video-back {
+  width: 41px !important;
+  height: 41px !important;
+
+  padding: 0 !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  border: 1px solid rgba(255, 190, 215, 0.20) !important;
+
+  border-radius: 50% !important;
+
+  background: rgba(255, 255, 255, 0.065) !important;
+
+  color: white !important;
+
+  backdrop-filter: blur(14px);
+
+  cursor: pointer;
+
+  pointer-events: auto !important;
+
+  z-index: 9999 !important;
+}
+
+
+.special-video-back svg {
+  width: 20px !important;
+  height: 20px !important;
+
+  pointer-events: none;
+}
+
+
+.special-video-header-title {
+  flex: 1;
+
+  margin-left: 12px;
+}
+
+
+.special-video-header-title span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  font-size: 7px !important;
+
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+
+  color: rgba(255, 180, 210, 0.55);
+}
+
+
+.special-video-header-title strong {
+  display: block;
+
+  font-size: 13px !important;
+
+  font-weight: 600;
+
+  color: rgba(255, 245, 249, 0.94);
+}
+
+
+.special-video-header > svg {
+  color: #ff80ae;
+
+  filter:
+    drop-shadow(
+      0 0 8px rgba(255, 70, 140, 0.45)
+    );
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.special-video-content {
+  position: relative !important;
+
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+
+  width: 100% !important;
+
+  min-height: 100%;
+
+  box-sizing: border-box;
+
+  padding:
+    150px
+    22px
+    100px !important;
+
+  overflow: visible !important;
+
+  text-align: center;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.special-video-intro {
+  margin: 0 0 18px !important;
+
+  text-align: center;
+}
+
+
+.special-video-intro span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 8px !important;
+
+  font-weight: 700;
+
+  letter-spacing: 2.8px;
+
+  color: #ff8eb7;
+
+  text-shadow:
+    0 0 12px rgba(255, 70, 140, 0.30);
+}
+
+
+.special-video-intro h1 {
+  margin: 0 !important;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif !important;
+
+  font-size: 26px !important;
+
+  line-height: 1.2;
+
+  font-weight: 500 !important;
+
+  letter-spacing: -0.3px;
+
+  color: #fff;
+}
+
+
+/* =========================================================
+   VIDEO CARD
+========================================================= */
+
+.special-video-wrapper {
+  position: relative !important;
+
+  width: 100% !important;
+
+  /*
+     Larger and more cinematic than before.
+  */
+  aspect-ratio: 16 / 10 !important;
+
+  max-height: none !important;
+
+  overflow: hidden !important;
+
+  border-radius: 23px !important;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.075),
+      rgba(255, 255, 255, 0.025)
+    ) !important;
+
+  border:
+    1px solid rgba(255, 170, 205, 0.18) !important;
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.40),
+    0 0 40px rgba(255, 50, 135, 0.07);
+
+  isolation: isolate;
+}
+
+
+.special-video-wrapper::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: inherit;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 150, 195, 0.10),
+      transparent 35%,
+      transparent 70%,
+      rgba(255, 100, 165, 0.06)
+    );
+
+  z-index: 5;
+}
+
+
+.special-video {
+  width: 100% !important;
+  height: 100% !important;
+
+  display: block;
+
+  object-fit: contain;
+
+  background: #060206;
+
+  position: relative;
+
+  z-index: 1;
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+========================================================= */
+
+.special-video-placeholder {
+  position: absolute !important;
+
+  inset: 0 !important;
+
+  display: flex !important;
+
+  flex-direction: column !important;
+
+  align-items: center !important;
+
+  justify-content: center !important;
+
+  text-align: center;
+
+  pointer-events: none !important;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(255, 70, 145, 0.15),
+      rgba(10, 2, 7, 0.93) 72%
+    );
+
+  z-index: 3;
+}
+
+
+.special-video-heart {
+  width: 64px !important;
+  height: 64px !important;
+
+  margin-bottom: 14px !important;
+
+  display: flex !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  border-radius: 50% !important;
+
+  color: #ff86b4 !important;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 100, 165, 0.16),
+      rgba(255, 100, 165, 0.025)
+    ) !important;
+
+  border:
+    1px solid rgba(255, 140, 185, 0.16);
+
+  box-shadow:
+    0 0 35px rgba(255, 60, 140, 0.20);
+}
+
+
+.special-video-heart svg {
+  width: 29px;
+  height: 29px;
+}
+
+
+.special-video-placeholder h3 {
+  margin: 0 !important;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif !important;
+
+  font-size: 16px !important;
+
+  font-weight: 600 !important;
+
+  color: rgba(255, 247, 250, 0.96);
+}
+
+
+.special-video-placeholder p {
+  margin: 7px 0 0 !important;
+
+  font-size: 10px !important;
+
+  color: rgba(255, 220, 235, 0.48);
+}
+
+
+.special-video-placeholder > span {
+  margin-top: 10px !important;
+
+  padding: 6px 12px;
+
+  border-radius: 999px;
+
+  background:
+    rgba(255, 255, 255, 0.045);
+
+  border:
+    1px solid rgba(255, 180, 210, 0.08);
+
+  color:
+    rgba(255, 205, 225, 0.38);
+
+  font-size: 8px;
+}
+
+
+/* =========================================================
+   NOTE
+========================================================= */
+
+.special-video-note {
+  margin: 18px 0 0 !important;
+
+  padding: 0 20px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif !important;
+
+  font-size: 11px !important;
+
+  line-height: 1.65 !important;
+
+  font-style: italic;
+
+  color:
+    rgba(255, 220, 235, 0.46) !important;
+}
+
+
+/* =========================================================
+   BOTTOM DECORATION
+========================================================= */
+
+.special-video-content::after {
+  content: "♡   ✦   ♡";
+
+  display: block;
+
+  margin-top: 22px;
+
+  padding-bottom: 20px;
+
+  font-size: 11px;
+
+  letter-spacing: 5px;
+
+  color:
+    rgba(255, 110, 170, 0.30);
+}
+
+
+/* =========================================================
+   HOME INDICATOR
+========================================================= */
+
+.special-video-page .home-indicator {
+  position: fixed !important;
+
+  bottom: 8px !important;
+
+  left: 50% !important;
+
+  transform: translateX(-50%) !important;
+
+  width: 115px !important;
+
+  height: 4px !important;
+
+  border-radius: 999px !important;
+
+  background:
+    rgba(255, 255, 255, 0.82) !important;
+
+  z-index: 500 !important;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   SHORTER SCREENS
+========================================================= */
+
+@media (max-height: 700px) {
+
+  .special-video-content {
+    padding-top: 125px !important;
+  }
+
+  .special-video-intro {
+    margin-bottom: 15px !important;
+  }
+
+  .special-video-intro h1 {
+    font-size: 24px !important;
+  }
+
+  .special-video-wrapper {
+    aspect-ratio: 16 / 10 !important;
+  }
+}
+
+
+/* =========================================================
+   SMALL WIDTH
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .special-video-content {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  .special-video-header {
+    left: 15px !important;
+    right: 15px !important;
+  }
+}
+/* =========================================================
+   SPECIAL VIDEO — IMAGE MATCH
+========================================================= */
+
+.special-video-page {
+  position: absolute !important;
+
+  inset: 0 !important;
+
+  overflow-x: hidden !important;
+
+  overflow-y: auto !important;
+
+  scrollbar-width: none;
+
+  -webkit-overflow-scrolling: touch;
+
+  touch-action: pan-y;
+
+  background:
+    radial-gradient(
+      circle at 50% 28%,
+      rgba(255, 60, 140, 0.20),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 50% 65%,
+      rgba(185, 25, 95, 0.12),
+      transparent 42%
+    ),
+    linear-gradient(
+      160deg,
+      #16030c 0%,
+      #350818 47%,
+      #110208 100%
+    );
+}
+
+
+.special-video-page::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =========================================================
+   BACKGROUND DECORATION
+========================================================= */
+
+.special-video-page::before {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  top: 160px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 55, 135, 0.11),
+      transparent 68%
+    );
+
+  filter: blur(18px);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.special-video-header {
+  position: absolute !important;
+
+  top: 42px !important;
+
+  left: 20px !important;
+
+  right: 20px !important;
+
+  height: 46px !important;
+
+  display: flex !important;
+
+  align-items: center !important;
+
+  z-index: 100 !important;
+
+  pointer-events: none;
+}
+
+
+/* Back button */
+
+.special-video-back {
+  width: 42px !important;
+
+  height: 42px !important;
+
+  flex-shrink: 0;
+
+  padding: 0 !important;
+
+  display: flex !important;
+
+  align-items: center !important;
+
+  justify-content: center !important;
+
+  border-radius: 50% !important;
+
+  border:
+    1px solid
+    rgba(255, 190, 215, 0.25) !important;
+
+  background:
+    rgba(255, 255, 255, 0.065) !important;
+
+  color: white !important;
+
+  backdrop-filter: blur(15px);
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0
+    rgba(255, 255, 255, 0.08);
+
+  cursor: pointer;
+
+  pointer-events: auto !important;
+
+  z-index: 9999 !important;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.special-video-back:hover {
+  background:
+    rgba(255, 100, 165, 0.12) !important;
+
+  transform: scale(1.05);
+}
+
+
+.special-video-back:active {
+  transform: scale(0.91);
+}
+
+
+.special-video-back svg {
+  width: 22px !important;
+
+  height: 22px !important;
+
+  pointer-events: none;
+}
+
+
+/* Header center */
+
+.special-video-header-title {
+  flex: 1;
+
+  margin-left: 13px;
+
+  min-width: 0;
+
+  text-align: center;
+}
+
+
+.special-video-header-title span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  font-size: 7px !important;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  color:
+    rgba(255, 170, 205, 0.65);
+
+  text-transform: uppercase;
+}
+
+
+.special-video-header-title strong {
+  display: block;
+
+  font-size: 13px !important;
+
+  line-height: 1.2;
+
+  font-weight: 600;
+
+  color:
+    rgba(255, 245, 249, 0.96);
+}
+
+
+/* Right heart */
+
+.special-header-heart {
+  flex-shrink: 0;
+
+  color: #ff75a9;
+
+  filter:
+    drop-shadow(
+      0 0 9px
+      rgba(255, 70, 140, 0.55)
+    );
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.special-video-content {
+  position: relative !important;
+
+  width: 100% !important;
+
+  min-height: 100%;
+
+  box-sizing: border-box;
+
+  padding:
+    300px
+    20px
+    110px !important;
+
+  text-align: center;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   TOP DIVIDER
+========================================================= */
+
+.special-top-divider {
+  width: 150px;
+
+  margin:
+    0 auto 35px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  color: #ff78aa;
+}
+
+
+.special-top-divider span {
+  flex: 1;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 115, 170, 0.65)
+    );
+}
+
+
+.special-top-divider span:last-child {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 115, 170, 0.65),
+      transparent
+    );
+}
+
+
+.special-top-divider svg {
+  filter:
+    drop-shadow(
+      0 0 8px
+      rgba(255, 70, 140, 0.5)
+    );
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.special-video-intro {
+  text-align: center;
+
+  margin-bottom: 28px;
+}
+
+
+.special-video-intro > span {
+  display: block;
+
+  margin-bottom: 9px;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 3.2px;
+
+  color: #ff83b1;
+
+  text-shadow:
+    0 0 15px
+    rgba(255, 70, 140, 0.35);
+}
+
+
+.special-video-intro h1 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 38px;
+
+  line-height: 1.1;
+
+  font-weight: 500;
+
+  letter-spacing: -1px;
+
+  color: #fff;
+
+  text-shadow:
+    0 3px 20px
+    rgba(255, 60, 135, 0.18);
+}
+
+
+.intro-heart {
+  display: inline-block;
+
+  margin-left: 9px;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 29px;
+
+  color: #ff638f;
+
+  filter:
+    drop-shadow(
+      0 0 10px
+      rgba(255, 70, 140, 0.6)
+    );
+}
+
+
+.special-video-intro p {
+  margin: 16px 0 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+
+  color:
+    rgba(255, 224, 237, 0.68);
+}
+
+
+/* =========================================================
+   VIDEO CARD
+========================================================= */
+
+.special-video-wrapper {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 16 / 10;
+
+  overflow: hidden;
+
+  border-radius: 25px;
+
+  border:
+    1px solid
+    rgba(255, 150, 195, 0.42);
+
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(255, 70, 145, 0.15),
+      rgba(8, 2, 6, 0.97) 68%
+    );
+
+  box-shadow:
+    0 25px 65px
+    rgba(0, 0, 0, 0.45),
+    0 0 40px
+    rgba(255, 45, 130, 0.09);
+
+  isolation: isolate;
+}
+
+
+/* Outer glow */
+
+.special-video-wrapper::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -1px;
+
+  border-radius: inherit;
+
+  border:
+    1px solid
+    rgba(255, 100, 165, 0.18);
+
+  pointer-events: none;
+
+  z-index: 8;
+}
+
+
+/* Actual video */
+
+.special-video {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100% !important;
+
+  height: 100% !important;
+
+  object-fit: contain;
+
+  display: block;
+
+  background: #070207;
+
+  z-index: 1;
+}
+
+
+/* =========================================================
+   VIDEO PLACEHOLDER
+========================================================= */
+
+.special-video-placeholder {
+  position: absolute !important;
+
+  inset: 0 !important;
+
+  display: flex !important;
+
+  flex-direction: column !important;
+
+  align-items: center !important;
+
+  justify-content: center !important;
+
+  text-align: center;
+
+  pointer-events: none !important;
+
+  background:
+    radial-gradient(
+      circle at 50% 40%,
+      rgba(255, 75, 150, 0.18),
+      rgba(9, 2, 7, 0.94) 72%
+    );
+
+  z-index: 4;
+}
+
+
+/* Main heart */
+
+.special-video-heart {
+  width: 104px !important;
+
+  height: 104px !important;
+
+  margin-bottom: 25px !important;
+
+  display: flex !important;
+
+  align-items: center !important;
+
+  justify-content: center !important;
+
+  border-radius: 50% !important;
+
+  color: #ff86b5 !important;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 80, 150, 0.20),
+      rgba(255, 80, 150, 0.03)
+    );
+
+  border:
+    1px solid
+    rgba(255, 115, 175, 0.35);
+
+  box-shadow:
+    0 0 0 12px
+    rgba(255, 80, 150, 0.025),
+    0 0 40px
+    rgba(255, 60, 140, 0.30);
+}
+
+
+.special-video-heart svg {
+  width: 45px;
+
+  height: 45px;
+}
+
+
+/* Placeholder title */
+
+.special-video-placeholder h3 {
+  margin: 0;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+  color: #fff;
+}
+
+
+/* Description */
+
+.special-video-placeholder p {
+  margin: 10px 0 0;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 12px;
+
+  color:
+    rgba(255, 215, 230, 0.58);
+}
+
+
+/* File label */
+
+.special-video-placeholder > span {
+  margin-top: 15px;
+
+  padding:
+    7px
+    13px;
+
+  border-radius: 999px;
+
+  background:
+    rgba(255, 255, 255, 0.045);
+
+  border:
+    1px solid
+    rgba(255, 180, 210, 0.12);
+
+  color:
+    rgba(255, 200, 220, 0.45);
+
+  font-size: 8px;
+
+  letter-spacing: 0.4px;
+}
+
+
+/* =========================================================
+   NOTE
+========================================================= */
+
+.special-video-note {
+  margin: 27px 0 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 15px;
+
+  line-height: 1.65;
+
+  font-style: italic;
+
+  color:
+    rgba(255, 222, 235, 0.72);
+
+  text-shadow:
+    0 0 15px
+    rgba(255, 80, 145, 0.12);
+}
+
+
+/* =========================================================
+   BOTTOM DIVIDER
+========================================================= */
+
+.special-bottom-divider {
+  width: 150px;
+
+  margin:
+    27px auto 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  color: #ff77a9;
+}
+
+
+.special-bottom-divider span {
+  flex: 1;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 115, 170, 0.65)
+    );
+}
+
+
+.special-bottom-divider span:last-child {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 115, 170, 0.65),
+      transparent
+    );
+}
+
+
+/* =========================================================
+   SYMBOLS
+========================================================= */
+
+.special-symbols {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 26px;
+
+  margin-bottom: 30px;
+
+  color: #ff73a7;
+
+  font-size: 21px;
+
+  text-shadow:
+    0 0 12px
+    rgba(255, 60, 140, 0.45);
+}
+
+
+.special-symbols span:nth-child(2) {
+  font-size: 17px;
+}
+
+
+/* =========================================================
+   FLOATING BOTTOM HEARTS
+========================================================= */
+
+.special-bottom-hearts {
+  position: relative;
+
+  height: 70px;
+
+  pointer-events: none;
+
+  opacity: 0.20;
+}
+
+
+.special-bottom-hearts span {
+  position: absolute;
+
+  color: #ff4389;
+
+  font-size: 30px;
+
+  filter:
+    blur(1px);
+}
+
+
+.special-bottom-hearts span:first-child {
+  left: 18px;
+
+  bottom: 10px;
+}
+
+
+.special-bottom-hearts span:last-child {
+  right: 18px;
+
+  bottom: 4px;
+
+  font-size: 24px;
+}
+
+
+/* =========================================================
+   HOME INDICATOR
+========================================================= */
+
+.special-video-page .home-indicator {
+  position: fixed !important;
+
+  left: 50% !important;
+
+  bottom: 8px !important;
+
+  transform: translateX(-50%) !important;
+
+  width: 115px !important;
+
+  height: 4px !important;
+
+  border-radius: 999px !important;
+
+  background:
+    rgba(255, 255, 255, 0.88) !important;
+
+  z-index: 500 !important;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .special-video-content {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .special-video-intro h1 {
+    font-size: 33px;
+  }
+
+  .special-video-wrapper {
+    border-radius: 22px;
+  }
+
+}
+
+
+@media (max-height: 720px) {
+
+  .special-video-content {
+    padding-top: 240px !important;
+  }
+
+  .special-video-intro h1 {
+    font-size: 34px;
+  }
+
+}
+/* =========================================================
+   SPECIAL VIDEO — SPACING FIX
+========================================================= */
+
+.special-video-content {
+  padding-top: 155px !important;
+}
+
+
+/* Override the previous short-screen rule */
+@media (max-height: 720px) {
+
+  .special-video-content {
+    padding-top: 155px !important;
+  }
+
+}
+
+
+/* Smaller screens */
+@media (max-height: 620px) {
+
+  .special-video-content {
+    padding-top: 135px !important;
+  }
+
+}
+/* =========================================================
+   SPECIAL VIDEO — FINAL COMPACT SPACING
+========================================================= */
+
+.special-video-content {
+  padding-top: 70px !important;
+}
+
+
+/* Keep the same spacing even on short screens */
+@media (max-height: 720px) {
+
+  .special-video-content {
+    padding-top: 70px !important;
+  }
+
+}
+
+
+/* Very small screens */
+@media (max-height: 620px) {
+
+  .special-video-content {
+    padding-top: 60px !important;
+  }
+
+}
+
+
+/* Reduce space around the first divider */
+.special-top-divider {
+  margin-top: 0 !important;
+  margin-bottom: 22px !important;
+}
+
+
+/* Bring the heading closer to the divider */
+.special-video-intro {
+  margin-bottom: 20px !important;
+}
+
+
+/* Slightly reduce the heading */
+.special-video-intro h1 {
+  font-size: 34px !important;
+}
+
+
+/* Reduce space before the video */
+.special-video-intro p {
+  margin-top: 11px !important;
+}
+
+
+/* Keep the video visible sooner */
+.special-video-wrapper {
+  margin-top: 0 !important;
+}
+/* =========================================================
+   SPECIAL VIDEO — FORCE CONTENT UP
+========================================================= */
+
+.special-video-content {
+  position: relative !important;
+
+  top: auto !important;
+  bottom: auto !important;
+
+  padding-top: 70px !important;
+
+  /*
+     Move the entire content block upward.
+     This removes the large empty area below
+     the header.
+  */
+  margin-top: -85px !important;
+
+  transform: none !important;
+}
+
+
+/* Keep it on smaller screens too */
+
+@media (max-height: 720px) {
+
+  .special-video-content {
+    padding-top: 70px !important;
+    margin-top: -85px !important;
+  }
+
+}
+
+
+@media (max-height: 620px) {
+
+  .special-video-content {
+    padding-top: 60px !important;
+    margin-top: -75px !important;
+  }
+
+}
+/* =========================================================
+   FINAL BIRTHDAY REVEAL
+========================================================= */
+
+.final-reveal-page {
+  position: absolute !important;
+
+  inset: 0 !important;
+
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+
+  scrollbar-width: none;
+
+  -webkit-overflow-scrolling: touch;
+
+  touch-action: pan-y;
+
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(255, 65, 145, 0.18),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 50% 70%,
+      rgba(185, 25, 95, 0.10),
+      transparent 42%
+    ),
+    linear-gradient(
+      160deg,
+      #16030c 0%,
+      #300716 48%,
+      #0e0207 100%
+    );
+
+  color: white;
+}
+
+
+.final-reveal-page::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+========================================================= */
+
+.final-glow {
+  position: fixed;
+
+  width: 330px;
+  height: 330px;
+
+  top: 100px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 65, 145, 0.20),
+      transparent 68%
+    );
+
+  filter: blur(15px);
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+
+/* =========================================================
+   FLOATING HEARTS
+========================================================= */
+
+.final-floating-hearts {
+  position: fixed;
+
+  width: 230px;
+  height: 220px;
+
+  top: 170px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  pointer-events: none;
+
+  color:
+    rgba(255, 125, 180, 0.55);
+
+  font-size: 18px;
+
+  z-index: 1;
+}
+
+
+.final-floating-hearts span {
+  position: absolute;
+}
+
+
+.final-floating-hearts span:nth-child(1) {
+  left: 12px;
+  top: 80px;
+}
+
+
+.final-floating-hearts span:nth-child(2) {
+  right: 12px;
+  top: 45px;
+}
+
+
+.final-floating-hearts span:nth-child(3) {
+  left: 105px;
+  top: 110px;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.final-reveal-content {
+  position: relative;
+
+  z-index: 5;
+
+  width: 100%;
+
+  max-width: 430px;
+
+  margin: 0 auto;
+
+  box-sizing: border-box;
+
+  padding:
+    105px
+    24px
+    50px;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   MAIN HEART
+========================================================= */
+
+.final-heart {
+  width: 82px;
+  height: 82px;
+
+  margin:
+    10px auto 22px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #ff82b2;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 100, 165, 0.18),
+      rgba(255, 80, 145, 0.025)
+    );
+
+  border:
+    1px solid
+    rgba(255, 145, 190, 0.22);
+
+  box-shadow:
+    0 0 0 10px
+    rgba(255, 80, 145, 0.025),
+
+    0 0 45px
+    rgba(255, 55, 140, 0.27),
+
+    inset 0 0 25px
+    rgba(255, 120, 180, 0.05);
+}
+
+
+.final-heart svg {
+  filter:
+    drop-shadow(
+      0 0 14px
+      rgba(255, 65, 140, 0.55)
+    );
+}
+
+
+/* =========================================================
+   HAPPY BIRTHDAY
+========================================================= */
+
+.final-small-text {
+  display: block;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  color:
+    rgba(255, 180, 210, 0.72);
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   NAME
+========================================================= */
+
+.final-reveal-content h1 {
+  margin:
+    9px 0 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 43px;
+
+  line-height: 1.1;
+
+  font-weight: 500;
+
+  letter-spacing: -1px;
+
+  color: #fff;
+
+  text-shadow:
+    0 0 25px
+    rgba(255, 80, 145, 0.18);
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.final-divider {
+  width: 160px;
+
+  margin:
+    20px auto 25px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  color: #ff78aa;
+}
+
+
+.final-divider span {
+  flex: 1;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 120, 175, 0.45)
+    );
+}
+
+
+.final-divider span:last-child {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 120, 175, 0.45),
+      transparent
+    );
+}
+
+
+.final-divider svg {
+  filter:
+    drop-shadow(
+      0 0 8px
+      rgba(255, 60, 140, 0.45)
+    );
+}
+
+
+/* =========================================================
+   MESSAGE CARD
+========================================================= */
+
+.final-message-card {
+  position: relative;
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding:
+    24px
+    20px
+    25px;
+
+  border-radius: 24px;
+
+  text-align: left;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.065),
+      rgba(255, 255, 255, 0.025)
+    );
+
+  border:
+    1px solid
+    rgba(255, 175, 210, 0.14);
+
+  box-shadow:
+    0 25px 55px
+    rgba(0, 0, 0, 0.28),
+
+    inset 0 1px 0
+    rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(12px);
+}
+
+
+/* Small glow inside card */
+
+.final-message-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 150px;
+  height: 150px;
+
+  top: -60px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 70, 145, 0.10),
+      transparent 70%
+    );
+
+  filter: blur(10px);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   MESSAGE TEXT
+========================================================= */
+
+.final-message-card p {
+  position: relative;
+
+  margin:
+    0 0 20px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 13px;
+
+  line-height: 1.82;
+
+  color: rgba(255, 240, 247, 0.88);
+}
+
+
+.final-message-card p:first-child {
+  margin-bottom: 23px;
+
+  font-size: 16px;
+
+  line-height: 1.5;
+
+  font-weight: 600;
+
+  color: #fff;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   SIGNATURE
+========================================================= */
+
+.final-signature {
+  position: relative;
+
+  margin-top: 26px;
+
+  padding-top: 20px;
+
+  border-top:
+    1px solid
+    rgba(255, 150, 190, 0.12);
+
+  text-align: center;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 15px;
+
+  font-style: italic;
+
+  color: #ff9abd;
+
+  text-shadow:
+    0 0 14px
+    rgba(255, 70, 140, 0.20);
+}
+
+
+/* =========================================================
+   ENDING DIVIDER
+========================================================= */
+
+.final-ending {
+  width: 150px;
+
+  margin:
+    28px auto 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: #ff79ab;
+}
+
+
+.final-ending-line {
+  flex: 1;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 120, 175, 0.35)
+    );
+}
+
+
+.final-ending-line:last-child {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 120, 175, 0.35),
+      transparent
+    );
+}
+
+
+/* =========================================================
+   BACK HOME
+========================================================= */
+
+.final-close-button {
+  display: block;
+
+  margin:
+    27px auto 0;
+
+  padding:
+    12px
+    25px;
+
+  border:
+    1px solid
+    rgba(255, 165, 200, 0.16);
+
+  border-radius: 999px;
+
+  background:
+    rgba(255, 255, 255, 0.045);
+
+  color:
+    rgba(255, 225, 235, 0.72);
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 10px;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(10px);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.final-close-button:hover {
+  background:
+    rgba(255, 100, 165, 0.10);
+}
+
+
+.final-close-button:active {
+  transform: scale(0.95);
+}
+
+
+/* =========================================================
+   BOTTOM SPACE
+========================================================= */
+
+.final-bottom-space {
+  height: 45px;
+}
+
+
+/* =========================================================
+   HOME INDICATOR
+========================================================= */
+
+.final-reveal-page .home-indicator {
+  position: fixed !important;
+
+  bottom: 8px !important;
+
+  left: 50% !important;
+
+  transform: translateX(-50%) !important;
+
+  width: 115px !important;
+
+  height: 4px !important;
+
+  border-radius: 999px !important;
+
+  background:
+    rgba(255, 255, 255, 0.85) !important;
+
+  z-index: 100 !important;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .final-reveal-content {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+
+  .final-reveal-content h1 {
+    font-size: 39px;
+  }
+
+  .final-message-card {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+
+  .final-message-card p {
+    font-size: 12.5px;
+  }
+
+}
+
+/* =========================================================
+   SPECIAL VIDEO - PORTRAIT LAYOUT
+   ========================================================= */
+
+.special-video-page {
+  position: relative !important;
+  width: 100%;
+  height: 100%;
+  overflow: hidden !important;
+}
+
+/* ---------------------------------------------------------
+   HEADER
+   --------------------------------------------------------- */
+
+.special-video-header {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 50;
+}
+
+.special-video-back {
+  position: absolute !important;
+  left: 18px;
+  top: 20px;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: white;
+
+  cursor: pointer;
+
+  z-index: 9999 !important;
+}
+
+.special-video-back svg {
+  pointer-events: none;
+}
+
+.special-video-header-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.special-video-header-title span {
+  font-size: 8px;
+  letter-spacing: 3px;
+  color: rgba(255, 145, 190, 0.8);
+}
+
+.special-video-header-title strong {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgba(255, 245, 250, 0.96);
+}
+
+.special-header-heart {
+  position: absolute;
+  right: 18px;
+
+  width: 42px;
+  height: 42px;
+
+  padding: 10px;
+
+  border-radius: 50%;
+
+  color: #ff79ae;
+
+  background: rgba(255, 105, 165, 0.08);
+
+  border: 1px solid rgba(255, 105, 165, 0.22);
+}
+
+/* ---------------------------------------------------------
+   SCROLL CONTENT
+   --------------------------------------------------------- */
+
+.special-video-content {
+  position: absolute !important;
+
+  top: 0 !important;
+  left: 0;
+  right: 0;
+  bottom: 0 !important;
+
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+
+  padding: 20px 20px 110px !important;
+
+  margin: 0 !important;
+
+  transform: none !important;
+
+  -webkit-overflow-scrolling: touch;
+
+  scrollbar-width: none;
+}
+
+.special-video-content::-webkit-scrollbar {
+  display: none;
+}
+
+/* ---------------------------------------------------------
+   TOP DIVIDER
+   --------------------------------------------------------- */
+
+.special-top-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  width: 100%;
+
+  margin-bottom: 18px;
+
+  color: #ff72a8;
+}
+
+.special-top-divider span {
+  width: 55px;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 105, 165, 0.45)
+  );
+}
+
+.special-top-divider span:last-child {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 105, 165, 0.45),
+    transparent
+  );
+}
+
+/* ---------------------------------------------------------
+   INTRO
+   --------------------------------------------------------- */
+
+.special-video-intro {
+  text-align: center;
+
+  margin-bottom: 24px;
+}
+
+.special-video-intro > span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 8px;
+
+  letter-spacing: 3px;
+
+  color: rgba(255, 132, 180, 0.75);
+}
+
+.special-video-intro h1 {
+  margin: 0;
+
+  font-size: 27px;
+
+  line-height: 1.2;
+
+  font-weight: 600;
+
+  color: rgba(255, 245, 250, 0.97);
+}
+
+.intro-heart {
+  display: inline-block;
+
+  margin-left: 7px;
+
+  color: #ff6fa7;
+
+  font-size: 19px;
+}
+
+.special-video-intro p {
+  margin: 10px 0 0;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+
+  color: rgba(255, 210, 230, 0.68);
+}
+
+/* ---------------------------------------------------------
+   PORTRAIT VIDEO
+   --------------------------------------------------------- */
+
+.special-portrait-video-wrapper {
+  position: relative;
+
+  width: min(100%, 310px);
+
+  aspect-ratio: 9 / 16;
+
+  margin: 0 auto;
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  background: #12070d;
+
+  border: 1px solid rgba(255, 150, 195, 0.32);
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.45),
+    0 0 35px rgba(255, 60, 140, 0.10);
+}
+
+.special-portrait-video {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  background: #12070d;
+}
+
+/* ---------------------------------------------------------
+   VIDEO PLACEHOLDER
+   --------------------------------------------------------- */
+
+.special-video-placeholder {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 25px;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(255, 70, 140, 0.12),
+      transparent 55%
+    ),
+    #180b12;
+
+  pointer-events: none;
+}
+
+.special-video-heart {
+  width: 76px;
+  height: 76px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 18px;
+
+  border-radius: 50%;
+
+  color: #ff73aa;
+
+  background: rgba(255, 80, 145, 0.12);
+
+  border: 1px solid rgba(255, 100, 160, 0.25);
+}
+
+.special-video-placeholder h3 {
+  margin: 0;
+
+  font-size: 16px;
+
+  color: rgba(255, 240, 247, 0.92);
+}
+
+.special-video-placeholder p {
+  margin: 8px 0;
+
+  font-size: 11px;
+
+  color: rgba(255, 205, 225, 0.65);
+}
+
+.special-video-placeholder span {
+  font-size: 9px;
+
+  color: rgba(255, 140, 185, 0.55);
+}
+
+/* ---------------------------------------------------------
+   NOTE
+   --------------------------------------------------------- */
+
+.special-video-note {
+  margin: 22px auto 0;
+
+  text-align: center;
+
+  font-size: 11px;
+
+  line-height: 1.7;
+
+  color: rgba(255, 210, 230, 0.65);
+}
+
+/* ---------------------------------------------------------
+   BOTTOM DIVIDER
+   --------------------------------------------------------- */
+
+.special-bottom-divider {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  margin: 24px auto 0;
+
+  color: #ff72a8;
+}
+
+.special-bottom-divider span {
+  width: 55px;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 105, 165, 0.35)
+  );
+}
+
+.special-bottom-divider span:last-child {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 105, 165, 0.35),
+    transparent
+  );
+}
+
+.special-symbols {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 22px;
+
+  margin-top: 14px;
+
+  color: rgba(255, 125, 175, 0.5);
+
+  font-size: 13px;
+}
+
+.special-video-bottom-space {
+  height: 30px;
+}
+
+/* ---------------------------------------------------------
+   HOME INDICATOR
+   --------------------------------------------------------- */
+
+.special-video-page .home-indicator {
+  position: absolute;
+
+  bottom: 8px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 115px;
+
+  height: 4px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.75);
+
+  z-index: 100;
+}
+
+/* ---------------------------------------------------------
+   SMALL PHONES
+   --------------------------------------------------------- */
+
+@media (max-height: 720px) {
+  .special-video-content {
+    padding-top: 90px !important;
+    padding-bottom: 95px !important;
+  }
+
+  .special-video-intro {
+    margin-bottom: 18px;
+  }
+
+  .special-video-intro h1 {
+    font-size: 24px;
+  }
+
+  .special-portrait-video-wrapper {
+    width: min(100%, 270px);
+  }
+
+  .special-video-note {
+    margin-top: 17px;
+  }
+}
+
+@media (max-height: 620px) {
+  .special-video-content {
+    padding-top: 82px !important;
+  }
+
+  .special-portrait-video-wrapper {
+    width: min(100%, 235px);
+  }
+
+  .special-video-intro {
+    margin-bottom: 12px;
+  }
+
+  .special-video-intro p {
+    margin-top: 6px;
+  }
+}
+/* =========================================================
+   SPECIAL VIDEO HEADER - SCROLLS WITH CONTENT
+   ========================================================= */
+
+.special-video-header {
+  position: relative !important;
+
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+
+  width: 100%;
+  height: 65px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 20;
+
+  margin-bottom: 8px;
+}
+
+.special-video-back {
+  position: absolute !important;
+
+  left: 0;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 42px;
+  height: 42px;
+
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: white;
+
+  cursor: pointer;
+
+  z-index: 30;
+}
+
+.special-video-header-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.special-video-header-title span {
+  font-size: 8px;
+  letter-spacing: 3px;
+  color: rgba(255, 145, 190, 0.8);
+}
+
+.special-video-header-title strong {
+  font-size: 19px;
+  font-weight: 600;
+  color: rgba(255, 245, 250, 0.96);
+}
+
+.special-header-heart {
+  position: absolute;
+
+  right: 0;
+
+  width: 42px;
+  height: 42px;
+
+  padding: 10px;
+
+  border-radius: 50%;
+
+  color: #ff79ae;
+
+  background: rgba(255, 105, 165, 0.08);
+
+  border: 1px solid rgba(255, 105, 165, 0.22);
+}
+
+/* =========================================================
+   FIX SPECIAL DAY CARD TEXT
+   ========================================================= */
+
+.card-small {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.card-date {
+  position: relative !important;
+  z-index: 2 !important;
+  margin-top: 4px !important;
+}
+
+.card-message {
+  position: relative !important;
+  z-index: 2 !important;
+
+  margin-top: 6px !important;
+
+  line-height: 1.35 !important;
+
+  display: block !important;
+
+  transform: translateY(-2px) !important;
+}
+/* Give the birthday card enough vertical space */
+.card-small,
+.card-date,
+.card-message {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   BIRTHDAY CARD - PROPERLY ALIGNED
+   ========================================================= */
+
+.birthday-card {
+  position: relative !important;
+
+  width: 100%;
+
+  height: 124px !important;
+  min-height: 124px !important;
+
+  box-sizing: border-box !important;
+
+  padding: 17px 20px !important;
+
+  overflow: hidden !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+/* YOUR SPECIAL DAY */
+.birthday-card .card-small {
+  position: relative !important;
+
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+
+  width: 100% !important;
+
+  margin: 0 0 13px !important;
+
+  padding: 0 !important;
+
+  text-align: center !important;
+
+  font-size: 8px !important;
+  line-height: 10px !important;
+  letter-spacing: 2px !important;
+
+  z-index: 3 !important;
+}
+
+/* DATE */
+.birthday-card .card-date {
+  position: relative !important;
+
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+
+  width: 100% !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  text-align: center !important;
+
+  font-size: 17px !important;
+  line-height: 20px !important;
+
+  z-index: 3 !important;
+}
+
+/* MESSAGE */
+.birthday-card .card-message {
+  position: relative !important;
+
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+
+  width: 100% !important;
+
+  margin: 3px 0 0 !important;
+  padding: 0 !important;
+
+  text-align: center !important;
+
+  font-size: 10px !important;
+  line-height: 14px !important;
+
+  z-index: 3 !important;
+}
+
+/* HEART */
+.birthday-card .card-heart {
+  position: absolute !important;
+
+  top: 50% !important;
+  right: 22px !important;
+
+  left: auto !important;
+
+  transform: translateY(-50%) !important;
+
+  width: auto !important;
+  height: auto !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  z-index: 5 !important;
+}
+
+/* Keep the heart from affecting text alignment */
+.birthday-card .card-heart svg {
+  display: block;
+}
+/* =========================================================
+   MEMORIES - PORTRAIT VIDEO
+   ========================================================= */
+
+.memory-video-card {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.memory-video-wrapper {
+  position: relative;
+
+  width: min(100%, 280px);
+  aspect-ratio: 9 / 16;
+
+  margin: 20px auto 0;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  background: #080509;
+
+  border: 1px solid rgba(255, 150, 195, 0.35);
+
+  box-shadow:
+    0 20px 55px rgba(0, 0, 0, 0.45),
+    0 0 35px rgba(255, 60, 140, 0.12);
+}
+
+.memory-video {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  background: #080509;
+}
+
+/* Video loading placeholder */
+.memory-video-placeholder {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 5;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(255, 70, 140, 0.15),
+      transparent 55%
+    ),
+    #180b12;
+
+  pointer-events: none;
+}
+
+.memory-play-icon {
+  width: 64px;
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 16px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 90, 150, 0.85);
+
+  box-shadow:
+    0 0 30px rgba(255, 80, 145, 0.3);
+}
+
+.memory-play-icon span {
+  width: 0;
+  height: 0;
+
+  margin-left: 4px;
+
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  border-left: 14px solid white;
+}
+
+.memory-video-placeholder p {
+  margin: 0 0 7px;
+
+  font-size: 15px;
+
+  color: rgba(255, 240, 247, 0.95);
+}
+
+.memory-video-placeholder > span {
+  font-size: 10px;
+
+  color: rgba(255, 205, 225, 0.65);
+}
+
+
+/* =========================================================
+   MEMORY LETTER
+   ========================================================= */
+
+.memory-video-info {
+  margin-top: 24px;
+
+  padding: 0 4px;
+}
+
+.memory-video-label {
+  margin-bottom: 20px;
+
+  text-align: center;
+
+  font-size: 17px;
+  line-height: 1.4;
+
+  font-weight: 600;
+
+  color: rgba(255, 242, 248, 0.98);
+}
+
+.memory-video-info p {
+  margin: 0 0 18px;
+
+  font-size: 12px;
+
+  line-height: 1.75;
+
+  color: rgba(255, 225, 238, 0.86);
+}
+
+.memory-video-info .memory-signature {
+  margin-top: 26px;
+
+  padding-top: 17px;
+
+  border-top: 1px solid rgba(255, 120, 170, 0.18);
+
+  text-align: right;
+
+  font-size: 13px;
+
+  font-style: italic;
+
+  color: rgba(255, 190, 215, 0.95);
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-height: 720px) {
+  .memory-video-wrapper {
+    width: min(100%, 255px);
+  }
+}
+
+@media (max-height: 620px) {
+  .memory-video-wrapper {
+    width: min(100%, 225px);
+  }
+}
+/* =========================================================
+   MUSIC PAGE - FINAL ALIGNMENT
+   ========================================================= */
+
+.music-page {
+  position: relative !important;
+  height: 100% !important;
+  width: 100% !important;
+  overflow: hidden !important;
+
+  box-sizing: border-box !important;
+
+  display: block !important;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
+
+.music-back {
+  position: absolute !important;
+
+  top: 54px !important;
+  left: 20px !important;
+
+  width: 42px !important;
+  height: 42px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  border-radius: 50% !important;
+
+  z-index: 100 !important;
+}
+
+
+/* =========================================================
+   NOW PLAYING HEADER
+   ========================================================= */
+
+.music-title {
+  position: absolute !important;
+
+  top: 82px !important;
+  left: 50% !important;
+
+  transform: translateX(-50%) !important;
+
+  width: auto !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  gap: 8px !important;
+
+  margin: 0 !important;
+
+  white-space: nowrap !important;
+
+  z-index: 10 !important;
+}
+
+.music-title span {
+  margin: 0 !important;
+
+  font-size: 14px !important;
+  letter-spacing: 1.8px !important;
+}
+
+
+/* =========================================================
+   ARTWORK
+   ========================================================= */
+
+.music-art {
+  position: absolute !important;
+
+  top: 112px !important;
+  left: 50% !important;
+
+  width: 154px !important;
+  height: 154px !important;
+
+  margin: 0 !important;
+
+  /* Framer Motion controls transform */
+  transform-origin: center center !important;
+
+  z-index: 5 !important;
+}
+
+
+/* =========================================================
+   SONG DETAILS
+   ========================================================= */
+
+.music-details {
+  position: absolute !important;
+
+  top: 300px !important;
+  left: 0 !important;
+  right: 0 !important;
+
+  width: 100% !important;
+
+  height: auto !important;
+
+  margin: 0 !important;
+  padding: 0 20px !important;
+
+  box-sizing: border-box !important;
+
+  text-align: center !important;
+
+  z-index: 10 !important;
+}
+
+.music-details h1 {
+  margin: 0 !important;
+
+  font-size: 38px !important;
+  line-height: 44px !important;
+
+  text-align: center !important;
+}
+
+.music-details p {
+  margin: 2px 0 0 !important;
+
+  font-size: 14px !important;
+  line-height: 20px !important;
+
+  text-align: center !important;
+}
+
+
+/* =========================================================
+   PROGRESS
+   ========================================================= */
+
+.music-progress {
+  position: absolute !important;
+
+  top: 385px !important;
+  left: 0 !important;
+  right: 0 !important;
+
+  width: calc(100% - 88px) !important;
+
+  height: 42px !important;
+
+  margin: 0 auto !important;
+  padding: 0 !important;
+
+  box-sizing: border-box !important;
+
+  z-index: 10 !important;
+}
+
+.music-progress input[type="range"] {
+  width: 100% !important;
+
+  margin: 0 !important;
+}
+
+.music-time {
+  display: flex !important;
+
+  justify-content: space-between !important;
+
+  margin-top: 4px !important;
+
+  font-size: 10px !important;
+}
+
+
+/* =========================================================
+   PLAYBACK CONTROLS
+   ========================================================= */
+
+.music-controls {
+  position: absolute !important;
+
+  top: 438px !important;
+  left: 50% !important;
+
+  transform: translateX(-50%) !important;
+
+  width: 230px !important;
+
+  height: 70px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  z-index: 10 !important;
+}
+
+.music-play {
+  width: 66px !important;
+  height: 66px !important;
+
+  margin: 0 !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  border-radius: 50% !important;
+}
+
+.music-skip {
+  width: 50px !important;
+  height: 50px !important;
+
+  margin: 0 !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  border-radius: 50% !important;
+}
+
+
+/* =========================================================
+   MUSIC FILE PANEL
+   ========================================================= */
+
+.music-file-panel {
+  position: absolute !important;
+
+  top: 525px !important;
+  left: 50% !important;
+
+  transform: translateX(-50%) !important;
+
+  width: calc(100% - 82px) !important;
+  max-width: 280px !important;
+
+  height: 64px !important;
+
+  box-sizing: border-box !important;
+
+  margin: 0 !important;
+  padding: 10px 15px !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  text-align: center !important;
+
+  z-index: 10 !important;
+}
+
+.music-file-panel span {
+  margin: 0 0 4px !important;
+
+  font-size: 9px !important;
+}
+
+.music-file-panel strong {
+  margin: 0 !important;
+
+  font-size: 9px !important;
+}
+
+
+/* =========================================================
+   QUOTE
+   ========================================================= */
+
+.music-quote {
+  position: absolute !important;
+
+  top: 600px !important;
+  left: 0 !important;
+  right: 0 !important;
+
+  width: 100% !important;
+
+  margin: 0 !important;
+  padding: 0 25px !important;
+
+  box-sizing: border-box !important;
+
+  text-align: center !important;
+
+  z-index: 10 !important;
+}
+
+.music-quote p {
+  margin: 0 !important;
+
+  font-size: 13px !important;
+  line-height: 18px !important;
+
+  text-align: center !important;
+}
+
+.quote-divider {
+  display: flex !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  gap: 10px !important;
+
+  margin-top: 8px !important;
+}
+
+.quote-divider span {
+  width: 42px !important;
+}
+
+
+/* =========================================================
+   HIDE UNUSED BOTTOM HEART
+   ========================================================= */
+
+.music-bottom-heart {
+  display: none !important;
+}
+
+
+/* =========================================================
+   HIDE ERROR MESSAGE WHEN NOT NEEDED
+   ========================================================= */
+
+.music-error {
+  display: none !important;
+}
+
+
+/* =========================================================
+   HOME INDICATOR
+   ========================================================= */
+
+.music-page .home-indicator {
+  position: absolute !important;
+
+  bottom: 8px !important;
+  left: 50% !important;
+
+  transform: translateX(-50%) !important;
+
+  z-index: 100 !important;
+}
+/* =========================================================
+   MUSIC PAGE - FINAL POSITION FIX
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   ARTWORK - TRUE CENTER
+   --------------------------------------------------------- */
+
+.music-art {
+  position: absolute !important;
+
+  top: 104px !important;
+
+  /* Important:
+     Do NOT use translateX(-50%) here because
+     Framer Motion controls transform on this element.
+  */
+  left: calc(50% - 77px) !important;
+
+  width: 154px !important;
+  height: 154px !important;
+
+  margin: 0 !important;
+
+  z-index: 5 !important;
+}
+
+
+/* ---------------------------------------------------------
+   SONG DETAILS
+   --------------------------------------------------------- */
+
+.music-details {
+  top: 285px !important;
+}
+
+.music-details h1 {
+  font-size: 37px !important;
+  line-height: 42px !important;
+}
+
+.music-details p {
+  margin-top: 1px !important;
+}
+
+
+/* ---------------------------------------------------------
+   PROGRESS BAR
+   --------------------------------------------------------- */
+
+.music-progress {
+  top: 365px !important;
+}
+
+
+/* ---------------------------------------------------------
+   CONTROLS
+   --------------------------------------------------------- */
+
+.music-controls {
+  top: 420px !important;
+}
+
+
+/* ---------------------------------------------------------
+   FILE PANEL
+   --------------------------------------------------------- */
+
+.music-file-panel {
+  top: 505px !important;
+
+  height: 62px !important;
+}
+
+
+/* ---------------------------------------------------------
+   QUOTE
+   --------------------------------------------------------- */
+
+.music-quote {
+  top: 580px !important;
+
+  padding: 0 20px !important;
+}
+
+.music-quote p {
+  font-size: 12px !important;
+  line-height: 17px !important;
+}
+
+
+/* ---------------------------------------------------------
+   HOME INDICATOR
+   --------------------------------------------------------- */
+
+.music-page .home-indicator {
+  bottom: 8px !important;
+}
+/* =========================================================
+   MUSIC SPECIAL PHOTO
+   ========================================================= */
+
+.music-photo-frame {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 112px;
+  height: 112px;
+
+  transform: translate(-50%, -50%);
+
+  padding: 5px;
+
+  box-sizing: border-box;
+
+  border-radius: 50%;
+
+  background: #ff4f98;
+
+  box-shadow:
+    0 0 15px rgba(255, 70, 140, 0.8),
+    0 0 30px rgba(255, 70, 140, 0.45);
+
+  z-index: 5;
+}
+
+.music-special-photo {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 3px solid #18050e;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   MUSIC - ROMANTIC BOTTOM MESSAGE
+   ========================================================= */
+
+.music-file-panel {
+  display: none !important;
+}
+
+.music-romantic-message {
+  position: absolute;
+
+  top: 545px;
+  left: 0;
+  right: 0;
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  z-index: 20;
+}
+
+.music-romantic-message p {
+  margin: 10px 0;
+
+  font-size: 13px;
+  line-height: 19px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  color: rgba(255, 225, 238, 0.88);
+}
+
+.music-romantic-divider {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  color: #ff65a3;
+}
+
+.music-romantic-divider span {
+  width: 42px;
+  height: 1px;
+
+  background: rgba(255, 100, 160, 0.35);
+}
+
+.music-romantic-divider svg {
+  flex-shrink: 0;
+
+  filter:
+    drop-shadow(
+      0 0 5px rgba(255, 80, 150, 0.5)
+    );
+}
+
+.music-romantic-divider.bottom {
+  margin-top: 10px;
+
+  opacity: 0.75;
+}
+/* Align NOW PLAYING with the back button */
+.music-title {
+  top: 55px !important;
+}
